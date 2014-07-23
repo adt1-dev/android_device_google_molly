@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+# Need AppWidget permission to prevent from Launcher's crash.
+# TODO(pattjin): Remove this when the TV Launcher is used, which does not support AppWidget.
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.app_widgets.xml:system/etc/permissions/android.software.app_widgets.xml
+
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
