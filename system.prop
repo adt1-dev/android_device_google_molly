@@ -1,0 +1,24 @@
+#
+# system.prop for mojo
+#
+
+ro.opengles.version = 131072
+wifi.interface=wlan0
+ap.interface=wlan0
+persist.tegra.nvmmlite = 1
+ro.sf.override_null_lcd_density = 1
+
+# use glcomposer as the default compositor
+persist.tegra.compositor=glcomposer
+
+# disable EGL_BUFFER_PRESERVED extension for OpenGLRenderer
+debug.hwui.render_dirty_regions=false
+
+# enable for no battery device
+hw.nobattery=true
+
+# Set HDMI not locks rotation
+persist.demo.hdmirotationlock=false
+
+# Set carrier
+ro.carrier=wifi-only

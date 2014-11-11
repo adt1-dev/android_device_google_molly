@@ -1,0 +1,49 @@
+# FORMAT:
+#  panelresolution=[xres]X[yres], such as panelresolution=1280X720
+#  powernode1 normal balanced maxbatterylife
+#  powernode2 normal balanced maxbatterylife
+#  ......
+#  powernoden normal balanced maxbatterylife
+#  panelresolution=[xres]X[yres], such as panelresolution=1920X1080
+#  powernode1 normal balanced maxbatterylife
+#  powernode2 normal balanced maxbatterylife
+#  ......
+#  powernoden normal balanced maxbatterylife
+#  ......
+#  ......
+#  panelresolution=[xres]X[yres], such as panelresolution=1920X1200
+#  powernode1 normal balanced maxbatterylife
+#  powernode2 normal balanced maxbatterylife
+#  ......
+#  powernoden normal balanced maxbatterylife
+#
+# NOTES:
+#  The panelresolution is the lcd panel resolution.
+#  No space should exist in panelresolution=[xres]X[yres].
+#  panelresolution=720X1280 equals with panelresolution=1280X720.
+#  For panelresolution=-1X-1, it should be the last set of power settings in this file.
+#  When your panel resolution is found in this file,
+#  it will use the set of power settings followed by your panel resolution.
+#  When your panel resolution is not found in this file, it will use the default power settings.
+#  The power settings followed by panelresolution=-1X-1 is the default power settings.
+#  powernode is the sysfs or variable we need to write and it is followed by three ints.
+#  normal, balanced, maxbatterylife are the three ints for different power modes.
+#
+panelresolution=1920X1200
+NV_FPSLIMIT 0 30 30
+NV_MAX_CORES 0 0 2
+/sys/module/cpu_tegra/parameters/cpu_user_cap 0 900000 900000
+/sys/class/graphics/fb0/device/smartdimmer/aggressiveness 29 29 29
+/sys/class/graphics/fb0/device/smartdimmer/enable 1 1 1
+panelresolution=2560X1600
+NV_FPSLIMIT 0 30 30
+NV_MAX_CORES 0 0 2
+/sys/module/cpu_tegra/parameters/cpu_user_cap 0 1000000 1000000
+/sys/class/graphics/fb0/device/smartdimmer/aggressiveness 29 29 29
+/sys/class/graphics/fb0/device/smartdimmer/enable 1 1 1
+panelresolution=-1X-1
+NV_FPSLIMIT 0 30 30
+NV_MAX_CORES 0 0 2
+/sys/module/cpu_tegra/parameters/cpu_user_cap 0 1000000 1000000
+/sys/class/graphics/fb0/device/smartdimmer/aggressiveness 29 29 29
+/sys/class/graphics/fb0/device/smartdimmer/enable 1 1 1
