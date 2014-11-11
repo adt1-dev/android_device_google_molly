@@ -8,7 +8,6 @@
 /staging        emmc            /dev/block/platform/sdhci-tegra.3/by-name/USP
 /metadata       emmc            /dev/block/platform/sdhci-tegra.3/by-name/MDA
 /data           ext4            /dev/block/platform/sdhci-tegra.3/by-name/UDA
-/sdcard         datamedia       /dev/null
-/external_sd    vfat            /dev/block/platform/sdhci-tegra.2/by-num/p1      /dev/block/platform/sdhci-tegra.2/mmcblk1
-/usbdrive1      vfat            /dev/block/platform/tegra-ehci.0/by-num/p1       /dev/block/platform/tegra-ehci.0/sda
-/usbdrive2      vfat            /dev/block/platform/tegra-xhci/by-num/p1         /dev/block/platform/tegra-xhci/sda
+/external_sd    vfat            /dev/block/platform/sdhci-tegra.2/by-num/p1      /dev/block/platform/sdhci-tegra.2/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
+/usbdrive1      vfat            /dev/block/platform/tegra-ehci.0/by-num/p1       /dev/block/platform/tegra-ehci.0/sda flags=removable;storage;display=USB-OTG
+/usbdrive2      vfat            /dev/block/platform/tegra-xhci/by-num/p1         /dev/block/platform/tegra-xhci/sda flags=removable;storage;display=USB-OTG2

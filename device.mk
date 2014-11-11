@@ -40,6 +40,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab
 
+# TWRP
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
