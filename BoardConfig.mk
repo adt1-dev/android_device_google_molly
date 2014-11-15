@@ -36,10 +36,12 @@ TARGET_NO_RADIOIMAGE := true
 BOARD_USES_ALSA_AUDIO := true
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/nvidia/tegra4
-TARGET_KERNEL_CONFIG := tegra_mojo_android_defconfig
+TARGET_KERNEL_SOURCE := kernel/madcatz/mojo
+TARGET_KERNEL_CONFIG := tegra11_android_defconfig
 
 TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 BOARD_FLASH_BLOCK_SIZE := 4096
@@ -47,10 +49,16 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
+TARGET_RECOVERY_FSTAB := device/madcatz/mojo/rootdir/etc/fstab.mojo
 
 # Graphics
 BOARD_EGL_CFG := device/madcatz/mojo/egl.cfg
 USE_OPENGL_RENDERER := true
+BOARD_EGL_WORKAROUND_BUG_10194508 := true
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+
+# Legacy blob support
+COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -64,16 +72,16 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
 BOARD_WLAN_DEVICE                := bcmdhd
 BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
-WIFI_DRIVER_FW_PATH_STA          := "/data/misc/wifi/firmware/fw_bcmdhd.bin"
-WIFI_DRIVER_FW_PATH_AP           := "/data/misc/wifi/firmware/fw_bcmdhd_apsta.bin"
-WIFI_DRIVER_FW_PATH_PARAM        := "/data/misc/wifi/firmware/firmware_path"
-WIFI_DRIVER_MODULE_ARG           := "iface_name=wlan0"
-WIFI_DRIVER_MODULE_NAME          := "bcmdhd"
+WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcm43241/parameters/firmware_path"
+WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/firmware/bcm43241/fw_bcmdhd_apsta.bin"
+WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/firmware/bcm43241/fw_bcmdhd.bin"
+WIFI_DRIVER_FW_PATH_P2P          := "/system/vendor/firmware/bcm43241/fw_bcmdhd_p2p.bin"
 
 # TWRP
 DEVICE_RESOLUTION := 1920x1080
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
+TW_INCLUDE_JB_CRYPTO := true
 TW_NO_SCREEN_TIMEOUT := true
-TW_EXCLUDE_SUPERSU := true
+TW_NO_USB_STORAGE := true

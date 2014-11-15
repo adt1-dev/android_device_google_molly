@@ -37,9 +37,6 @@ PRODUCT_PACKAGES += \
     power.mojo.rc \
     ueventd.mojo.rc
 
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/vold.fstab:system/etc/vold.fstab
-
 # TWRP
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
@@ -56,12 +53,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml
 
-# idc
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/ilitek_hid.idc:system/usr/idc/ilitek_hid.idc \
-    $(LOCAL_PATH)/idc/raydium_ts.idc:system/usr/idc/raydium_ts.idc \
-    $(LOCAL_PATH)/idc/sensor00fn11.idc:system/usr/idc/sensor00fn11.idc
-
 # keylayout #TODO custom kb
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
@@ -74,13 +65,13 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/asound.conf:system/etc/asound.conf \
     $(LOCAL_PATH)/audio/audioConfig_qvoice_icera_pc400.xml:system/etc/audioConfig_qvoice_icera_pc400.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    audio.r_submix.default \
     audio.usb.default
 
 # Bluetooth
@@ -89,12 +80,9 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/bcm43241/fw_bcmdhd.bin:system/vendor/firmware/bcm43241/fw_bcmdhd.bin \
-    $(LOCAL_PATH)/wifi/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-    $(LOCAL_PATH)/wifi/nvram_JP01_43241.txt:system/etc/nvram_JP01_43241.txt \
-    $(LOCAL_PATH)/wifi/nvram_US39_43241.txt:system/etc/nvram_US39_43241.txt \
-    $(LOCAL_PATH)/wifi/nvram_XV01_43241.txt:system/etc/nvram_XV01_43241.txt \
-    $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
     libnetcmdiface
@@ -113,5 +101,4 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
-    make_ext4fs \
     setup_fs
