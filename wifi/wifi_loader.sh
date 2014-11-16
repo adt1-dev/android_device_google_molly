@@ -9,18 +9,19 @@
 # license agreement from NVIDIA CORPORATION is strictly prohibited.
 
 region=$(cat /data/misc/wifi/conf/wifi_region.conf)
+
 	if [ $region = "JP01" ]; then
 		/system/bin/log -t "wifiloader" -p i  "Japan region"
-		/system/bin/ln -s /system/etc/nvram_JP01_$chip.txt /system/etc/nvram_43241.txt
+		/system/bin/ln -s /system/etc/nvram_JP01_43241.txt /system/etc/nvram_43241.txt
 	elif [ $region = "US39" ]; then
 		/system/bin/log -t "wifiloader" -p i  "US region"
-		/system/bin/ln -s /system/etc/nvram_US39_$chip.txt /system/etc/nvram_43241.txt
+		/system/bin/ln -s /system/etc/nvram_US39_43241.txt /system/etc/nvram_43241.txt
 	elif [ $region = "XV01" ]; then
 		/system/bin/log -t "wifiloader" -p i  "Global region"
-		/system/bin/ln -s /system/etc/nvram_XV01_$chip.txt /system/etc/nvram_43241.txt
+		/system/bin/ln -s /system/etc/nvram_XV01_43241.txt /system/etc/nvram_43241.txt
 		else
 		/system/bin/log -t "wifiloader" -p i  "Default global region"
-		/system/bin/ln -s /system/etc/nvram_XV01_$chip.txt /system/etc/nvram_43241.txt
+		/system/bin/ln -s /system/etc/nvram_XV01_43241.txt /system/etc/nvram_43241.txt
 			fi
 		fi
 	fi
