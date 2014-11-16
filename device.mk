@@ -80,9 +80,7 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+    $(LOCAL_PATH)/wifi/wifi_loader.sh:system/bin/wifi_loader.sh
 
 PRODUCT_PACKAGES += \
     libnetcmdiface
@@ -102,3 +100,5 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # Filesystem management tools
 PRODUCT_PACKAGES += \
     setup_fs
+
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)

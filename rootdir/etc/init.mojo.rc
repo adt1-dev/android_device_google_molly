@@ -315,6 +315,13 @@ service wbtmiscwriter /system/bin/wbtmiscwriter.sh
     group root
     oneshot
 
+# wifiloader
+service wifiloader /system/bin/wifi_loader.sh
+    class main
+    user root
+    group root
+    oneshot
+
 service ethloader /system/bin/ethernet_loader.sh
     class main
     user root
