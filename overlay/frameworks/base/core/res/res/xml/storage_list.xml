@@ -43,7 +43,7 @@
              android:storageDescription="@string/storage_sd_card"
              android:removable="true" />
 
-    <storage android:mountPoint="/mnt/usbdrive"
+    <storage android:mountPoint="/storage/usbdrive"
              android:storageDescription="@string/storage_usb"
              android:removable="true" />
 

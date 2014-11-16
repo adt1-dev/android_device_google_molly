@@ -29,16 +29,15 @@ TARGET_CPU_SMP := true
 
 # Board
 TARGET_BOARD_PLATFORM := tegra
+TARGET_BOOTLOADER_BOARD_NAME := mojo
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
-
-# Audio
-BOARD_USES_ALSA_AUDIO := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/madcatz/mojo
 TARGET_KERNEL_CONFIG := tegra11_android_defconfig
 
+# Partition
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 20971520 #20M ??
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608 #8M
@@ -58,6 +57,11 @@ USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
+# Audio
+BOARD_USES_ALSA_AUDIO := true
+BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
+BOARD_HAVE_PRE_KITKAT_AUDIO_POLICY_BLOB := true
+
 # Legacy blob support
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
@@ -76,7 +80,12 @@ BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
 WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcm43241/parameters/firmware_path"
 WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/firmware/bcm43241/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/firmware/bcm43241/fw_bcmdhd.bin"
-WIFI_DRIVER_FW_PATH_P2P          := "/system/vendor/firmware/bcm43241/fw_bcmdhd_p2p.bin"
+
+# SELINUX Defines
+#BOARD_SEPOLICY_DIRS := \
+#    device/madcatz/mojo/sepolicy
+
+#BOARD_SEPOLICY_UNION := \
 
 # TWRP
 DEVICE_RESOLUTION := 1920x1080

@@ -21,6 +21,10 @@ bin/ussr_setup.sh
 bin/wbtmiscwriter.sh
 etc/bluetooth/bdaddr
 etc/enctune.conf
+etc/nvram_JP01_43241.txt
+etc/nvram_US39_43241.txt
+etc/nvram_XV01_43241.txt
+etc/nvcpud.conf
 etc/firmware/bcm43241.hcd
 etc/firmware/nvavp_aud_ucode.bin
 etc/firmware/nvavp_os_0ff00000.bin
@@ -141,7 +145,6 @@ usr/share/alsa/pcm/surround51.conf
 usr/share/alsa/pcm/surround71.conf
 vendor/firmware/bcm43241/fw_bcmdhd_apsta.bin
 vendor/firmware/bcm43241/fw_bcmdhd.bin
-vendor/firmware/bcm43241/fw_bcmdhd_p2p.bin
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/hw/power.mojo.so
 vendor/lib/libwvdrm_L1.so
