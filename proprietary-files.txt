@@ -12,7 +12,6 @@ bin/nvcpud
 bin/nv_hciattach
 bin/nvtest
 bin/powerservice
-bin/set_hwui_params.sh
 bin/test-wvdrmplugin
 bin/tf_daemon
 bin/usdwatchdog
