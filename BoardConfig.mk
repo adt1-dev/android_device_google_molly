@@ -35,7 +35,7 @@ TARGET_NO_RADIOIMAGE := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/madcatz/mojo
-TARGET_KERNEL_CONFIG := tegra11_android_defconfig
+TARGET_KERNEL_CONFIG := cyanogenmod_mojo_defconfig
 
 # Partition
 TARGET_USERIMAGES_USE_EXT4 := true
