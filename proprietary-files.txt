@@ -6,7 +6,6 @@ bin/ethernet_loader.sh
 bin/hotplug
 bin/input_cfboost_init.sh
 bin/mount_debugfs.sh
-bin/nvcap_test
 bin/nvcgcserver
 bin/nvcpud
 bin/nv_hciattach

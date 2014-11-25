@@ -85,6 +85,10 @@ PRODUCT_CHARACTERISTICS := tablet
 # Enable Widevine drm
 PRODUCT_PROPERTY_OVERRIDES += drm.service.enabled=true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.carrier=wifi-only \
+    tf.enable=y
+
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
