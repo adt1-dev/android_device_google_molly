@@ -48,7 +48,6 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 # Recovery
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/madcatz/mojo/recovery/recovery_keys.c
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := device/madcatz/mojo/rootdir/etc/fstab.mojo
 
