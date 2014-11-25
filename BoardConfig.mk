@@ -87,3 +87,17 @@ WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/firmware/bcm43241/fw_bcmdhd.
 #    device/madcatz/mojo/sepolicy
 
 #BOARD_SEPOLICY_UNION := \
+#    file_contexts \
+#    genfs_contexts \
+#    app.te \
+#    bdaddwriter.te \
+#    device.te \
+#    drmserver.te \
+#    init_shell.te \
+#    file.te \
+#    sensors_config.te \
+#    system.te \
+#    zygote.te \
+#    healthd.te \
+#    domain.te \
+#    ueventd.te
