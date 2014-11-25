@@ -8,6 +8,7 @@
 /dev/block/platform/sdhci-tegra.3/by-name/UDA           /data               ext4      noatime,nosuid,nodev,data=ordered,noauto_da_alloc,errors=panic                      wait,encryptable=/dev/block/platform/sdhci-tegra.3/by-name/MDA
 /dev/block/platform/sdhci-tegra.3/by-name/TMP           /mft                ext4      noatime,nosuid,nodev,data=writeback,nodelalloc,errors=panic                         wait
 /dev/block/platform/sdhci-tegra.3/by-name/SOS           /recovery           emmc      defaults                                                                            defaults
+/dev/block/platform/sdhci-tegra.3/by-name/LNX           /boot               emmc      defaults                                                                            defaults
 /dev/block/platform/sdhci-tegra.3/by-name/USP           /staging            emmc      defaults                                                                            defaults
 /devices/platform/sdhci-tegra.2/mmc_host/mmc1           auto                vfat      defaults                                                                            voldmanaged=sdcard1:auto
 /devices/platform/tegra-ehci.0                          auto                vfat      defaults                                                                            voldmanaged=usbdrive:auto
