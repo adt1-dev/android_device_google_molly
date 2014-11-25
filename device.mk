@@ -33,13 +33,8 @@ PRODUCT_PACKAGES += \
     fstab.mojo \
     init.mojo.rc \
     init.mojo.usb.rc \
-    init.tf.rc \
     power.mojo.rc \
     ueventd.mojo.rc
-
-# TWRP
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # Permissions
 PRODUCT_COPY_FILES += \

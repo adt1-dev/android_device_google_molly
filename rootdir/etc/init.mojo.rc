@@ -401,3 +401,13 @@ on boot
     setprop wifi.supplicant wpa_suppl_nl
     write /proc/sys/net/core/wmem_default 262144
     write /proc/sys/net/core/wmem_max 262144
+
+# start tf_daemon service
+service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d
+    class main
+    user root
+    group shell
+
+# may restart due to /data/tf not existing yet
+on property:init.svc.tf_daemon=restarting
+    mkdir /data/tf

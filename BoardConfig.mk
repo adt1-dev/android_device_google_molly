@@ -55,7 +55,6 @@ TARGET_RECOVERY_FSTAB := device/madcatz/mojo/rootdir/etc/fstab.mojo
 BOARD_EGL_CFG := device/madcatz/mojo/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_HAVE_PIXEL_FORMAT_INFO := true
-BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 # Audio
@@ -87,12 +86,3 @@ WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/firmware/bcm43241/fw_bcmdhd.
 #    device/madcatz/mojo/sepolicy
 
 #BOARD_SEPOLICY_UNION := \
-
-# TWRP
-DEVICE_RESOLUTION := 1920x1080
-BOARD_HAS_NO_REAL_SDCARD := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-RECOVERY_SDCARD_ON_DATA := true
-TW_INCLUDE_JB_CRYPTO := true
-TW_NO_SCREEN_TIMEOUT := true
-TW_NO_USB_STORAGE := true
