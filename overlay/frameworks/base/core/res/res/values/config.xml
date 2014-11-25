@@ -125,6 +125,6 @@
     <bool name="config_batterySdCardAccessibility">true</bool>
 
     <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">2</integer>
+    <integer name="config_multiuserMaximumUsers">8</integer>
 
 </resources>
