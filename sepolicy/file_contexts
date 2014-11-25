@@ -1,9 +1,4 @@
 /dev/knvmap                       u:object_r:knv_device:s0
-/dev/lightsensor                  u:object_r:sensors_device:s0
-/dev/mi1040                       u:object_r:camera_device:s0
-/dev/ov5693                       u:object_r:camera_device:s0
-/data/nvcam(/.*)?                 u:object_r:nvcam_data_files:s0
-/dev/ttyHS1                       u:object_r:gps_device:s0
 /dev/ttyHS2                       u:object_r:hci_attach_dev:s0
 /dev/tegra-crypto                 u:object_r:nvhost_writable_device:s0
 /dev/tegra-throughput             u:object_r:nvhost_writable_device:s0
@@ -25,16 +20,7 @@
 /dev/nvhost-vi                    u:object_r:nvhost_writable_device:s0
 /dev/nvhdcp*                      u:object_r:video_device:s0
 
-/data/sensors(/.*)?               u:object_r:sensors_data_file:s0
 /data/tf(/.*)?                    u:object_r:tee_data_file:s0
-
-/system/bin/gpsd               -- u:object_r:gpsd_exec:s0
 
 /sys/devices/platform/host1x/tegradc\.0(/.*)?                u:object_r:sysfs_devices_tegradc:s0
 /sys/devices/platform/host1x/tegradc\.1(/.*)?                u:object_r:sysfs_devices_tegradc:s0
-
-# Hardware tunables
-/sys/class/graphics/fb0/device/smartdimmer/enable        u:object_r:sysfs_writable:s0
-
-/dev/block/platform/sdhci-tegra.3/by-name/PER     u:object_r:sensors_block_device:s0
-/persist(/.*)?			   u:object_r:calibration_data_file:s0
