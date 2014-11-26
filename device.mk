@@ -106,4 +106,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     setup_fs
 
+# Bootmenu
+PRODUCT_PACKAGES += \
+    bootmenu \
+    kexec
+
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
