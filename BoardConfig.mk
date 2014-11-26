@@ -53,7 +53,7 @@ TARGET_RECOVERY_FSTAB := device/madcatz/mojo/rootdir/etc/fstab.mojo
 TARGET_RECOVERY_INITRC := device/madcatz/mojo/recovery/recovery.rc
 
 # Releasetools
-TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/madcatz/mojo/releasetools/ouya_ota_from_target_files
+TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := device/madcatz/mojo/releasetools/mojo_ota_from_target_files
 
 # Graphics
 BOARD_EGL_CFG := device/madcatz/mojo/egl.cfg
