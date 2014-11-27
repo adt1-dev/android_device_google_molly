@@ -8,6 +8,9 @@ ap.interface=wlan0
 persist.tegra.nvmmlite = 1
 ro.sf.override_null_lcd_density = 1
 
+# GPU producer to CPU consumer not supported
+ro.bq.gpu_to_cpu_unsupported=1
+
 # use glcomposer as the default compositor
 persist.tegra.compositor=glcomposer
 
