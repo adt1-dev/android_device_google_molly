@@ -40,17 +40,12 @@ on fs
     mount_all /fstab.mojo
 
 on post-fs-data
-    mkdir /data/misc/wifi 0770 wifi wifi
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/wifi/firmware 0770 wifi wifi
-    mkdir /data/misc/dhcp 0770 dhcp dhcp
     mkdir /data/misc/wifi/conf 0777 wifi wifi
     mkdir /data/misc/bluedroid/conf 0777 bluetooth bluetooth
     mkdir /data/nvcam 0700 media camera
     chown 0777 /data/misc/wifi/conf
     chown 0777 /data/misc/bluedroid/conf
-
-    chown dhcp dhcp /data/misc/dhcp
 
     mkdir /data/misc/wminput 0776 system system
 
@@ -315,11 +310,10 @@ service usdwatchdog /system/bin/usdwatchdog --wait 30
     group system
     class main
 
-service wpa_suppl_nl /system/bin/logwrapper /system/bin/wpa_supplicant \
+service wpa_suppl_nl /system/bin/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
-    -O/data/misc/wifi/sockets -N \
-    -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
+    -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf -N \
     -I/system/etc/wifi/p2p_supplicant_overlay.conf \
     -puse_p2p_group_interface=1 -e/data/misc/wifi/entropy.bin \
     -g@android:wpa_wlan0

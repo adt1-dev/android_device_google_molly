@@ -108,7 +108,7 @@
     <!-- Maximum wallpaper width for devices with very high-res screen (1920x1200)
          the wallpaper width suggestion by the launcher may be too large for
          the GPU to handle. -->
-    <integer name="config_wallpaperMaxWidth">1920</integer>
+    <!-- integer name="config_wallpaperMaxWidth">1920</integer -->
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
          autodetected from the Configuration. -->
@@ -117,7 +117,9 @@
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
 
-    <!--  Maximum number of supported users -->
+    <!-- Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">8</integer>
+    <!-- Whether UI for multi user should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
 
 </resources>

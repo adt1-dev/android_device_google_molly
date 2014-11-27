@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2010 The Android Open Source Project
+<!-- Copyright (C) 2013 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -98,9 +98,7 @@
              bitRate="384000"
              width="176"
              height="144"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="amrnb"
              bitRate="12200"
@@ -113,9 +111,7 @@
              bitRate="14000000"
              width="1920"
              height="1080"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="aac"
              bitRate="96000"
@@ -128,9 +124,7 @@
              bitRate="384000"
              width="176"
              height="144"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="amrnb"
              bitRate="12200"
@@ -143,9 +137,7 @@
              bitRate="1536000"
              width="352"
              height="288"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="amrnb"
              bitRate="12200"
@@ -158,9 +150,7 @@
              bitRate="4000000"
              width="640"
              height="480"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="aac"
              bitRate="96000"
@@ -173,9 +163,7 @@
              bitRate="8000000"
              width="1280"
              height="720"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="aac"
              bitRate="96000"
@@ -188,9 +176,7 @@
              bitRate="14000000"
              width="1920"
              height="1080"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="aac"
              bitRate="96000"
@@ -203,9 +189,7 @@
              bitRate="384000"
              width="176"
              height="144"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -222,9 +206,7 @@
              bitRate="14000000"
              width="1920"
              height="1080"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -241,9 +223,7 @@
              bitRate="384000"
              width="176"
              height="144"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -260,9 +240,7 @@
              bitRate="1536000"
              width="352"
              height="288"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -279,9 +257,7 @@
              bitRate="4000000"
              width="640"
              height="480"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -298,9 +274,7 @@
              bitRate="8000000"
              width="1280"
              height="720"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -317,9 +291,7 @@
              bitRate="14000000"
              width="1920"
              height="1080"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -346,9 +318,7 @@
              bitRate="384000"
              width="176"
              height="144"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="amrnb"
              bitRate="12200"
@@ -361,9 +331,7 @@
              bitRate="8000000"
              width="1280"
              height="720"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="aac"
              bitRate="96000"
@@ -376,9 +344,7 @@
              bitRate="384000"
              width="176"
              height="144"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="amrnb"
              bitRate="12200"
@@ -391,9 +357,7 @@
              bitRate="1536000"
              width="352"
              height="288"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="amrnb"
              bitRate="12200"
@@ -406,9 +370,7 @@
              bitRate="4000000"
              width="640"
              height="480"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="aac"
              bitRate="96000"
@@ -421,9 +383,7 @@
              bitRate="8000000"
              width="1280"
              height="720"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <Audio codec="aac"
              bitRate="96000"
@@ -436,9 +396,7 @@
              bitRate="384000"
              width="176"
              height="144"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -455,9 +413,7 @@
              bitRate="8000000"
              width="1280"
              height="720"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -474,9 +430,7 @@
              bitRate="384000"
              width="176"
              height="144"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -493,9 +447,7 @@
              bitRate="1536000"
              width="352"
              height="288"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -512,9 +464,7 @@
              bitRate="4000000"
              width="640"
              height="480"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode
@@ -531,9 +481,7 @@
              bitRate="8000000"
              width="1280"
              height="720"
-             frameRate="30"
-             profile="8"
-             numBFrames="0" />
+             frameRate="30" />
 
       <!--
             The Audio part of the profile will not be used since time lapse mode

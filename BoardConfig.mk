@@ -34,6 +34,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Kernel
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
 TARGET_KERNEL_SOURCE := kernel/madcatz/mojo
 TARGET_KERNEL_CONFIG := cyanogenmod_mojo_defconfig
 
@@ -86,17 +87,22 @@ WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/firmware/bcm43241/fw_bcmdhd_
 WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/firmware/bcm43241/fw_bcmdhd.bin"
 
 # SELINUX Defines
-BOARD_SEPOLICY_DIRS := \
-    device/madcatz/mojo/sepolicy
+#BOARD_SEPOLICY_DIRS := \
+#    device/madcatz/mojo/sepolicy
 
-BOARD_SEPOLICY_UNION := \
-    file_contexts \
-    app.te \
-    device.te \
-    drmserver.te \
-    init_shell.te \
-    file.te \
-    system.te \
-    zygote.te \
-    domain.te \
-    ueventd.te
+#BOARD_SEPOLICY_UNION := \
+#    file_contexts \
+#    app.te \
+#    device.te \
+#    drmserver.te \
+#    init_shell.te \
+#    file.te \
+#    system.te \
+#    zygote.te \
+#    domain.te \
+#    ueventd.te
+
+# Include an expanded selection of fonts
+EXTENDED_FONT_FOOTPRINT := true
+
+MALLOC_IMPL := dlmalloc
