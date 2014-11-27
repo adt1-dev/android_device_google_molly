@@ -19,10 +19,6 @@ bin/ussr_setup.sh
 bin/wbtmiscwriter.sh
 etc/bluetooth/bdaddr
 etc/enctune.conf
-etc/nvram_JP01_43241.txt
-etc/nvram_US39_43241.txt
-etc/nvram_XV01_43241.txt
-etc/nvcpud.conf
 etc/firmware/bcm43241.hcd
 etc/firmware/nvavp_aud_ucode.bin
 etc/firmware/nvavp_os_0ff00000.bin
@@ -30,6 +26,10 @@ etc/firmware/nvavp_os_eff00000.bin
 etc/firmware/nvavp_vid_ucode_alt.bin
 etc/firmware/tegra11x/nvhost_msenc02.fw
 etc/firmware/tegra11x/nvhost_tsec.fw
+etc/nvcpud.conf
+etc/nvram_JP01_43241.txt
+etc/nvram_US39_43241.txt
+etc/nvram_XV01_43241.txt
 lib/egl/libEGL_tegra_impl.so
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra_impl.so
@@ -127,3 +127,4 @@ vendor/lib/hw/power.mojo.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/mediadrm/libwvdrmengine.so
