@@ -53,7 +53,6 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := device/madcatz/mojo/rootdir/etc/fstab.mojo
 
 # Graphics
-BOARD_EGL_CFG := device/madcatz/mojo/egl.cfg
 USE_OPENGL_RENDERER := true
 
 # Audio
