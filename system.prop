@@ -5,11 +5,23 @@
 ro.opengles.version = 131072
 wifi.interface=wlan0
 ap.interface=wlan0
-persist.tegra.nvmmlite = 1
 ro.sf.override_null_lcd_density = 1
 
 # GPU producer to CPU consumer not supported
 ro.bq.gpu_to_cpu_unsupported=1
+
+# from dalmore, check nvidia
+persist.tegra.nvmmlite = 1
+
+# HDMI only display
+persist.tegra.hdmi.primary = 1
+
+# hwcomposer selects max HDMI resolution
+persist.sys.hdmi.resolution = Max
+
+# hwcomposer tells surface flinger to always use 1920x1080 resolution
+# regardless of HDMI mode
+persist.sys.display.resolution = 1920x1080
 
 # use glcomposer as the default compositor
 persist.tegra.compositor=glcomposer
@@ -33,5 +45,5 @@ ro.hwui.texture_cache_flushrate=0.4
 # don't preload OpenGL in Zygote, the Tegra drivers do not like it
 ro.zygote.disable_gl_preload=true
 
-# Set HDMI not locks rotation
-persist.demo.hdmirotationlock=false
+# Set carrier
+ro.carrier=wifi-only

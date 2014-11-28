@@ -89,16 +89,9 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_CHARACTERISTICS := tablet
 
-# Enable Widevine drm
-PRODUCT_PROPERTY_OVERRIDES += drm.service.enabled=true
-
+# Adb over TCP
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.carrier=wifi-only \
-    tf.enable=y
-
-# Set default USB interface
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    service.adb.tcp.port=5555
 
 # Debugging
 ADDITIONAL_DEFAULT_PROPERTIES += \
@@ -106,9 +99,18 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.debuggable=1
 
+# Set default USB interface
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp
+
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
+
+# Enable Widevine drm
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    ro.com.widevine.cachesize=16777216
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \

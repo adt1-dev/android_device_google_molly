@@ -161,9 +161,6 @@ on boot
     write /sys/power/edp/battery/imx091/notify 1
     write /sys/power/edp/battery/speaker/notify 1
 
-    # Enable ADB over TCP
-    setprop service.adb.tcp.port 5555
-
 # USB Host enable
 on property:sys.boot_completed=1
     write /sys/devices/platform/tegra-otg/enable_host 1

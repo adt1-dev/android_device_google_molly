@@ -55,15 +55,12 @@ TARGET_RECOVERY_FSTAB := device/madcatz/mojo/rootdir/etc/fstab.mojo
 # Graphics
 BOARD_EGL_CFG := device/madcatz/mojo/egl.cfg
 USE_OPENGL_RENDERER := true
-BOARD_HAVE_PIXEL_FORMAT_INFO := true
-TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
-BOARD_HAVE_PRE_KITKAT_AUDIO_POLICY_BLOB := true
 
-# Legacy blob support
+# Pre-kitkat blob support
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 
 # Bluetooth
