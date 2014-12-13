@@ -26,9 +26,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 # Inherit from mojo device
 $(call inherit-product, device/madcatz/mojo/device.mk)
 
-# Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_mojo
 PRODUCT_DEVICE := mojo
 PRODUCT_BRAND := MadCatz
-PRODUCT_MANUFACTURER := Foxconn International Holdings Limited
 PRODUCT_MODEL := Mad Catz M.O.J.O.
+PRODUCT_MANUFACTURER := Foxconn International Holdings Limited
