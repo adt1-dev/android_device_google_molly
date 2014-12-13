@@ -25,9 +25,7 @@ etc/firmware/nvavp_vid_ucode_alt.bin
 etc/firmware/tegra11x/nvhost_msenc02.fw
 etc/firmware/tegra11x/nvhost_tsec.fw
 etc/nvcpud.conf
-etc/nvram_JP01_43241.txt
-etc/nvram_US39_43241.txt
-etc/nvram_XV01_43241.txt
+etc/nvram.txt
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra.so
 lib/egl/libGLESv2_tegra.so
@@ -97,7 +95,7 @@ lib/libpowerservice_client.so
 lib/libpowerservice.so
 lib/libstagefrighthw.so
 #lib/libtf_crypto_sst.so
-lib/libtinyalsa.so
+#lib/libtinyalsa.so
 lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 lib/libussrd.so

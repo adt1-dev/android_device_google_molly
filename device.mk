@@ -74,10 +74,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
-# Wifi
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/wifi_loader.sh:system/bin/wifi_loader.sh
-
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd \
