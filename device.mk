@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
+# Keystore
+PRODUCT_PACKAGES += \
+    keystore.mojo
+
 # Media config
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -108,7 +112,8 @@ PRODUCT_PACKAGES += \
 
 # Enable Widevine drm
 PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true
+    drm.service.enabled=true \
+    ro.com.widevine.cachesize=16777216
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
