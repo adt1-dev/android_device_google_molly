@@ -96,6 +96,7 @@ lib/libpowerservice.so
 lib/libstagefrighthw.so
 lib/libtf_crypto_sst.so
 lib/libtinyalsa-legacy.so
+lib/libtinyalsa.so
 lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 lib/libussrd.so
@@ -108,4 +109,3 @@ vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libwvdrmengine.so
-
