@@ -10,5 +10,5 @@
 /dev/block/platform/sdhci-tegra.3/by-name/LNX           /boot               emmc      defaults                                                                            defaults
 /dev/block/platform/sdhci-tegra.3/by-name/SOS           /recovery           emmc      defaults                                                                            defaults
 /dev/block/platform/sdhci-tegra.3/by-name/USP           /staging            emmc      defaults                                                                            defaults
-/devices/platform/sdhci-tegra.2/mmc_host/mmc1           auto                vfat      defaults                                                                            voldmanaged=sdcard1:auto
+/devices/platform/sdhci-tegra.2/mmc_host/mmc1           auto                vfat      defaults                                                                            voldmanaged=sdcard1:auto,noemulatedsd
 /devices/platform/tegra-ehci.0                          auto                vfat      defaults                                                                            voldmanaged=usbdrive:auto
