@@ -5,6 +5,7 @@ bin/dcc
 bin/ethernet_loader.sh
 bin/hotplug
 bin/input_cfboost_init.sh
+bin/mft_data
 bin/mount_debugfs.sh
 bin/nvcgcserver
 bin/nvcpud
