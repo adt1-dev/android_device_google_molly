@@ -66,10 +66,6 @@ PRODUCT_COPY_FILES += \
 # Hdmi CEC: mojo works as a playback device (4).
 PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4
 
-# Keystore
-PRODUCT_PACKAGES += \
-    keystore.mojo
-
 # Media config
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
