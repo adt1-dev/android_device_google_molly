@@ -1,24 +1,24 @@
-# Device configuration for Mad Catz M.O.J.O.
+# Google ADT-1 Device Configuration 
 
 ## Spec Sheet
 | Feature                 | Specification                     |
 | :---------------------- | :-------------------------------- |
 | CPU                     | Quad Core 1.8GHz                  |
 | Chipset                 | NVIDIA® Tegra 4 T40S              |
-| GPU                     | NVIDIA® GPU                       |
+| GPU                     | Kepler GK20A                      |
 | Memory                  | 2GB RAM                           |
-| Shipped Android Version | 4.2.2                             |
+| Shipped Android Version | L                                 |
 | Storage                 | 16GB                              |
-| MicroSD                 | Up to 128GB                       |
-| USB                     | 1 x USB 3.0 port 1 x USB 2.0 port |
+| Bluetooth               | v4.0                              |
+| Ethernet                | 10/100 Ethernet                   |
+| WiFi                    | 802.11 a/b/g/ 2×2 MIMO WiFi       |
+| USB                     | 1 x USB 2.0 port                  |
+| Video Out               | HDMI                              |
 | Battery                 | AC powered                        |
-| Dimentions              | 12.4 x 8.2 x 5 inches             |
-| Weight                  | 4.8 pounds                        |
-| Display                 | HDMI output 1920 x 1080 pixels    |
-| Release Date            | December 2013                     |
+| Release Date            | June 25, 2014                         |
 
 ## Device Picture
-![Mad Catz M.O.J.O](http://store.madcatz.com/MCB60211_mojo_console_00_lg.jpg "Mad Catz M.O.J.O")
+![Gooogle ADT-1](http://www.cnx-software.com/wp-content/uploads/2014/06/ADT-1_ANdroid_TV_Reference_Design.jpg "Gooogle ADT-1")
 
 ## Copyright
 
