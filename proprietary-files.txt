@@ -1,4 +1,5 @@
 bin/nvcgcserver
+etc/DxDrmConfig.txt
 etc/enctune.conf
 etc/firmware/nvavp_aud_ucode.bin
 etc/firmware/nvavp_os_0ff00000.bin
@@ -16,15 +17,14 @@ lib/hw/hwcomposer.tegra4.so
 lib/hw/keystore.molly.so
 lib/libardrv_dynamic.so
 lib/libaudioavp.so
-etc/DxDrmConfig.txt
-vendor/lib/mediadrm/libDxModularPluginNv.so
-lib/libDxDrmServer.so
 lib/libcgdrv.so
 lib/libcplconnectclient.so
 lib/libdrmdecrypt.so
+lib/libDxDrmServer.so
 lib/libEGL_tegra_impl.so
 lib/libGLESv1_CM_tegra_impl.so
 lib/libGLESv2_tegra_impl.so
+lib/libmolly_audio.so
 lib/libnvapputil.so
 lib/libnvavp.so
 lib/libnvblit.so
@@ -33,7 +33,6 @@ lib/libnvcpl.so
 lib/libnvddk_2d.so
 lib/libnvddk_2d_v2.so
 lib/libnvfusebypass.so
-lib/libmolly_audio.so
 lib/libnvglsi.so
 lib/libnvmm_audio.so
 lib/libnvmm_contentpipe.so
@@ -76,4 +75,5 @@ vendor/lib/hw/power.molly.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/mediadrm/libDxModularPluginNv.so
 vendor/lib/mediadrm/libwvdrmengine.so

@@ -39,6 +39,7 @@ TARGET_KERNEL_CONFIG := cyanogenmod_molly_defconfig
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_MRVL
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/google/molly/bluetooth
 
 # Camera
