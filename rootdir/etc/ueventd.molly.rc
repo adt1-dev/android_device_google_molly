@@ -1,0 +1,46 @@
+/dev/tegra-throughput	0666	system	system
+/dev/knvmap     0660    system  system
+/dev/nvmap      0666    system  system
+/dev/tegra_avp  0660    media   media
+/dev/tegra_avpchannel   0660    media   media
+/dev/tegra_audio_avpchannel	0660	media	media
+/dev/tegra_rpc  0660    media   media
+/dev/tegra_sema	0660    media   media
+/dev/tegra_mediaserver  0660    media   media
+/dev/tegra_dc*  0660    system  system
+/dev/nvhdcp0    0660    system  system
+/dev/nvhdcp1    0660    system  system
+/dev/nvhost-ctrl	0666	root	root
+/dev/nvhost-display	0000	root	root
+/dev/nvhost-gr2d	0666	root	root
+/dev/nvhost-gr3d	0666	root	root
+/dev/nvhost-mpe		0660	media	media
+/dev/nvhost-msenc 0660  media   camera
+/dev/nvhost-tsec  0666	root	root
+/dev/nvhost-vi	  0660	media	camera
+/dev/tf_driver  0660    drmrpc  drmrpc
+/dev/timerirq   0640    system  system
+/dev/ion        0666    system  system
+/dev/timerinfo  0440    system  system
+/dev/cpu_freq_min	0660	system	system
+/dev/cpu_freq_max	0660	system	system
+/dev/min_online_cpus	0660	system	system
+/dev/max_online_cpus	0660	system	system
+
+# Device specific stuff
+/dev/aah_localtime        0660   media     root
+/dev/audio0_out           0660   media     root
+/dev/audio0_out_ctl       0660   media     root
+/dev/led                  0660   system    system
+/dev/mbtchar0             0660   system    bluetooth
+
+# sys_data partition - The partition number here must be kept in sync
+# with the sys_data partition entry in the partition cfg file.
+/dev/block/mmcblk0p9      0660   system    system
+
+# for camera
+/dev/bus/usb/*            0660   media     usb
+/dev/video0               0660   media     usb
+
+# cec
+/dev/tegra_cec            0660   system    system
