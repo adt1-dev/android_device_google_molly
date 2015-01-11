@@ -1,9 +1,9 @@
-/recovery       emmc            /dev/block/platform/sdhci-tegra.3/by-name/SOS
-/boot           emmc            /dev/block/platform/sdhci-tegra.3/by-name/LNX
-/system         ext4            /dev/block/platform/sdhci-tegra.3/by-name/APP
-/cache          ext4            /dev/block/platform/sdhci-tegra.3/by-name/CAC
-/misc           emmc            /dev/block/platform/sdhci-tegra.3/by-name/MSC
-/staging        emmc            /dev/block/platform/sdhci-tegra.3/by-name/USP
-/metadata       emmc            /dev/block/platform/sdhci-tegra.3/by-name/MDA
-/data           ext4            /dev/block/platform/sdhci-tegra.3/by-name/UDA
-/external_sd    vfat            /dev/block/platform/sdhci-tegra.2/by-num/p1      /dev/block/platform/sdhci-tegra.2/mmcblk1  flags=display="Micro SDcard";storage;wipeingui;removable
+/system         ext4            /dev/block/platform/sdhci-tegra.3/by-name/system
+/cache          ext4            /dev/block/platform/sdhci-tegra.3/by-name/cache
+/data           ext4            /dev/block/platform/sdhci-tegra.3/by-name/userdata
+/misc           emmc            /dev/block/platform/sdhci-tegra.3/by-name/misc
+/boot           emmc            /dev/block/platform/sdhci-tegra.3/by-name/boot
+/recovery       emmc            /dev/block/platform/sdhci-tegra.3/by-name/recovery
+/dtb            emmc            /dev/block/platform/sdhci-tegra.3/by-name/DTB
+/staging        emmc            /dev/block/platform/sdhci-tegra.3/by-name/staging
+/sysdata        emmc            /dev/block/platform/sdhci-tegra.3/by-name/sysdata

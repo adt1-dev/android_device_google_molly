@@ -54,6 +54,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    audio.r_submix.default \
     audio.usb.default
 
 # Hdmi CEC: molly works as a playback device (4).
@@ -75,10 +76,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     dhcpcd.conf \
     hostapd \
-    libnetcmdiface \
     libwpa_client \
     wpa_supplicant \
     wpa_supplicant.conf
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -107,9 +110,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     ro.com.widevine.cachesize=16777216
-
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    setup_fs
-
-$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
