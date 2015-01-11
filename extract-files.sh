@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #set -e
-export DEVICE=google
-export VENDOR=molly
+export DEVICE=molly
+export VENDOR=google
 
 if [ $# -eq 0 ]; then
   SRC=adb

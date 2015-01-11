@@ -70,7 +70,14 @@ TARGET_RECOVERY_DEVICE_DIRS += device/google/molly
 TARGET_RECOVERY_FSTAB := device/google/molly/rootdir/etc/fstab.molly
 
 # Wifi related defines
-# TODO
+BOARD_HAVE_MARVELL_WIFI          := true
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mrvl
+BOARD_WLAN_DEVICE                := mrvl
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_mrvl
+WIFI_DRIVER_FW_PATH_AP           := "/vendor/firmware/mrvl/sd8797_uapsta.bin"
 
 # SELINUX Defines
 #BOARD_SEPOLICY_DIRS := \
