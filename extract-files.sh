@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #set -e
-export DEVICE=mojo
-export VENDOR=madcatz
+export DEVICE=google
+export VENDOR=molly
 
 if [ $# -eq 0 ]; then
   SRC=adb

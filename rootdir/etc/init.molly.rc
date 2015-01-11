@@ -232,13 +232,6 @@ service bugreport /system/bin/dumpstate -d -p -B \
 	disabled
 	oneshot
 
-# Make sure that the common time service is in the net_raw group so it can make
-# use of SO_BINDTODEVICE.
-service common_time /system/bin/common_time
-	class main
-	user media
-	group media inet net_raw
-
 # start tf_daemon service
 service tf_daemon /system/bin/tf_daemon -storageDir /data/tf -d
 	class main

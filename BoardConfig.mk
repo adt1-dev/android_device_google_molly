@@ -17,7 +17,7 @@
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/madcatz/mojo/include
+TARGET_SPECIFIC_HEADER_PATH := device/google/molly/include
 
 # Architecture
 TARGET_CPU_ABI := armeabi-v7a
@@ -27,26 +27,19 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a15
 
 # Board
-TARGET_BOARD_PLATFORM := tegra
-TARGET_BOOTLOADER_BOARD_NAME := mojo
+TARGET_BOARD_PLATFORM := tegra4
+TARGET_BOOTLOADER_BOARD_NAME := molly
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
-TARGET_KERNEL_SOURCE := kernel/madcatz/mojo
-TARGET_KERNEL_CONFIG := cyanogenmod_mojo_defconfig
-
-# Audio
-BOARD_USES_ALSA_AUDIO := true
-BOARD_HAVE_PRE_KITKAT_AUDIO_BLOB := true
-BOARD_HAVE_PRE_KITKAT_AUDIO_POLICY_BLOB := true
-USE_LEGACY_AUDIO_POLICY := 1
+TARGET_KERNEL_SOURCE := kernel/google/molly
+TARGET_KERNEL_CONFIG := cyanogenmod_molly_defconfig
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/madcatz/mojo/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/google/molly/bluetooth
 
 # Camera
 USE_CAMERA_STUB = true
@@ -72,23 +65,15 @@ TARGET_RELEASE_CPPFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_HAS_NO_SELECT_BUTTON := true
-TARGET_RECOVERY_DEVICE_DIRS += device/madcatz/mojo
-TARGET_RECOVERY_FSTAB := device/madcatz/mojo/rootdir/etc/fstab.mojo
+TARGET_RECOVERY_DEVICE_DIRS += device/google/molly
+TARGET_RECOVERY_FSTAB := device/google/molly/rootdir/etc/fstab.molly
 
 # Wifi related defines
-BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
-WPA_SUPPLICANT_VERSION           := VER_0_8_X
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
-BOARD_WLAN_DEVICE                := bcmdhd
-BOARD_HOSTAPD_DRIVER             := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
-WIFI_DRIVER_FW_PATH_PARAM        := "/data/misc/wifi/firmware/firmware_path"
-WIFI_DRIVER_FW_PATH_AP           := "/data/misc/wifi/firmware/fw_bcmdhd_apsta.bin"
-WIFI_DRIVER_FW_PATH_STA          := "/data/misc/wifi/firmware/fw_bcmdhd.bin"
+# TODO
 
 # SELINUX Defines
 #BOARD_SEPOLICY_DIRS := \
-#    device/madcatz/mojo/sepolicy
+#    device/google/molly/sepolicy
 
 #BOARD_SEPOLICY_UNION := \
 #    file_contexts \

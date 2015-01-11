@@ -23,19 +23,18 @@ TARGET_BOOTANIMATION_NAME := 800
 
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
-$(call inherit-product-if-exists, vendor/madcatz/mojo/mojo-vendor.mk)
+$(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    device/madcatz/mojo/overlay
+    device/google/molly/overlay
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.mojo \
-    init.mojo.rc \
-    init.mojo.usb.rc \
-    power.mojo.rc \
-    ueventd.mojo.rc
+    fstab.molly \
+    init.molly.rc \
+    init.molly.usb.rc \
+    ueventd.molly.rc
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -51,19 +50,13 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audioConfig_qvoice_icera_pc400.xml:system/etc/audioConfig_qvoice_icera_pc400.xml \
-    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml
+    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default
 
-# Bluetooth
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
-
-# Hdmi CEC: mojo works as a playback device (4).
+# Hdmi CEC: molly works as a playback device (4).
 PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4
 
 # Media config
@@ -90,11 +83,11 @@ PRODUCT_PACKAGES += \
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 # Adb over TCP
 PRODUCT_PROPERTY_OVERRIDES += \
-    service.adb.tcp.port=5555
+    service.adb.tcp.port=4321
 
 # Debugging
 ADDITIONAL_DEFAULT_PROPERTIES += \
