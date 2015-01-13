@@ -1,21 +1,15 @@
 # Google ADT-1 Device Configuration 
 
 ## Spec Sheet
-| Feature                 | Specification                     |
-| :---------------------- | :-------------------------------- |
-| CPU                     | Quad Core 1.8GHz                  |
-| Chipset                 | NVIDIA® Tegra 4 T40S              |
-| GPU                     | Kepler GK20A                      |
-| Memory                  | 2GB RAM                           |
-| Shipped Android Version | L                                 |
-| Storage                 | 16GB                              |
-| Bluetooth               | v4.0                              |
-| Ethernet                | 10/100 Ethernet                   |
-| WiFi                    | 802.11 a/b/g/ 2×2 MIMO WiFi       |
-| USB                     | 1 x USB 2.0 port                  |
-| Video Out               | HDMI                              |
-| Battery                 | AC powered                        |
-| Release Date            | June 25, 2014                         |
+| Feature                 | Specification                                                                               |
+| :---------------------- | :------------------------------------------------------------------------------------------ |
+| Chipset                 | Quad Core 1.9GHz NVIDIA® Tegra 4 (Cortex-A15)<br/>NVIDIA® GPU                               |
+| Memory                  | 2GB LPDDR3<br/>16GB Storage                                                                 |
+| Network Interfaces      | 10/100 Ethernet<br/>802.11 a/b/g/ 2×2 MIMO WiFi<br/>Bluetooth  v4.0                         |
+| Ports                   | USB 2.0<br/>HDMI Out<br/>RJ-45 (Wired Internet)<br/>USB Mini-AB (Power Input/USB debugging) |
+| Shipped Android Version | L                                                                                           |
+| Gamepad                 | Bluetooth 3.0 (4.0 compatible)               												                        |
+| Release Date            | June 25, 2014                                                                               |
 
 ## Device Picture
 ![Gooogle ADT-1](http://www.cnx-software.com/wp-content/uploads/2014/06/ADT-1_ANdroid_TV_Reference_Design.jpg "Gooogle ADT-1")
