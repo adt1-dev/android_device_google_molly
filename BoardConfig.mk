@@ -50,6 +50,7 @@ USE_CAMERA_STUB = true
 
 # Graphics
 USE_OPENGL_RENDERER := true
+SF_VSYNC_EVENT_PHASE_OFFSET_NS := 1
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
