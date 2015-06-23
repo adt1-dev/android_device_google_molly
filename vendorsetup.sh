@@ -1,1 +1,2 @@
+add_lunch_combo cm_molly-eng
 add_lunch_combo cm_molly-userdebug
