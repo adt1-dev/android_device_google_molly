@@ -29,6 +29,16 @@ $(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     device/google/molly/overlay
 
+# Include the Tv parts for use
+PRODUCT_PACKAGES += \
+    TvProvider \
+    TvSettings \
+    tv_input.default
+
+# Include AppDrawer from the Nexus Player
+PRODUCT_PACKAGES += \
+    AppDrawer
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.molly \

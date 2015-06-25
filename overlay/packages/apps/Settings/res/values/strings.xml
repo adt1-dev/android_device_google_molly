@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Strings for asking to the user whether to allow an app to enable discovery mode -->
+    <string name="bluetooth_ask_discovery" product="tv">An app wants to make your Android TV device visible to other Bluetooth devices for <xliff:g id="timeout">%1$d</xliff:g> seconds.</string>
+
+    <!-- Strings for asking to the user whether to allow an app to enable lasting discovery mode  -->
+    <string name="bluetooth_ask_lasting_discovery" product="tv">An app wants to make your Android TV device visible to other Bluetooth devices. You can change this later in Bluetooth settings.</string>
+
+    <!-- Strings for asking to the user whether to allow an app to enable bluetooth and discovery mode -->
+    <string name="bluetooth_ask_enablement_and_discovery" product="tv">An app wants to turn on Bluetooth and make your Android TV device visible to other devices for <xliff:g id="timeout">%1$d</xliff:g> seconds.</string>
+
+    <!-- Strings for asking to the user whether to allow an app to enable bluetooth and discovery mode -->
+    <string name="bluetooth_ask_enablement_and_lasting_discovery" product="tv">An app wants to turn on Bluetooth and make your Android TV device visible to other devices. You can change this later in Bluetooth settings.</string>
+
+    <!-- The title of the activity to see phone info -->
+    <string name="phone_info_label" product="tv">Android TV info</string>
+
+    <!-- mobile network settings screen, message in dialog box that appears when you select the "Data roaming" check box. This is for multiuser Andoird TV devices [CHAR LIMIT=none] -->
+    <string name="roaming_warning_multiuser" product="tv">When you allow data roaming, you may incur significant roaming charges!\n\nThis setting affects all users on this Android TV device.</string>
+
+    <!-- Title of the preferences item to control encryption -->
+    <string name="crypt_keeper_encrypt_title" product="tv">Encrypt Android TV device</string>
+
+    <!-- Informational text in the first confirmation screen before starting device encryption -->
+    <string name="crypt_keeper_desc" product="tv">
+    You can encrypt your accounts, settings, downloaded apps and their data,
+    media, and other files. After you encrypt your Android TV device, assuming you\'ve set up a
+    screen lock (that is, a pattern or numeric PIN or password), you\'ll need to unlock the screen
+    to decrypt the Android TV device every time you power it on. The only other way to decrypt is
+    to perform a factory data reset, erasing all your data.\n\nEncryption takes an hour or more.
+    You must keep your Android TV device plugged in throughout the process. If you interrupt it,
+    you\'ll lose some or all of your data</string>
+
+    <!-- Button text to start encryption process -->
+    <string name="crypt_keeper_button_text" product="tv">Encrypt Android TV device</string>
+    <!-- Button text to start encryption process -->
+
+    <!-- Warning text in the final confirmation screen before starting device encryption -->
+    <string name="crypt_keeper_final_desc" product="tv">
+    The encryption operation is irreversible and if you interrupt it, you\'ll lose data.
+    Encryption takes an hour or more, during which the Android TV device will restart several times.
+    </string>
+
+    <!-- Informational text on the progress screen while encrypting the device -->
+    <string name="crypt_keeper_setup_description" product="tv">Wait while your Android TV device
+    is being encrypted. <xliff:g id="percent" example="50">^1</xliff:g>% complete.</string>
+
+    <string name="crypt_keeper_setup_time_remaining" product="tv">Wait while your Android TV device
+    is being encrypted. Time remaining: <xliff:g id="duration" example="1:23">^1</xliff:g></string>
+
+    <string name="crypt_keeper_force_power_cycle" product="tv">To unlock your Android TV device, turn it off and then on.</string>
+
+    <!-- Informational text when encryption fails -->
+    <string name="crypt_keeper_failed_summary" product="tv">
+      Encryption was interrupted and can\'t complete. As a result, the data on
+      your Android TV device is no longer accessible.
+      \n\n
+      To resume using your Android TV device, you need to perform a factory reset.
+      When you set up your Android TV device after the reset, you\'ll have an opportunity
+      to restore any data that was backed up to your Google Account.
+    </string>
+
+    <!-- Informational text when encryption fails -->
+    <string name="crypt_keeper_data_corrupt_summary" product="tv">
+      The password you entered is correct, but unfortunately your data is
+      corrupt.
+      \n\nTo resume using your Android TV device, you need to perform a factory reset.
+      When you set up your Android TV device after the reset, you\'ll have an opportunity
+      to restore any data that was backed up to your Google Account.
+    </string>
+
+    <!-- Bluetooth settings.  Message for disconnecting from the PAN profile (NAP role). [CHAR LIMIT=80] -->
+    <string name="bluetooth_disconnect_pan_nap_profile" product="tv"><xliff:g id="device_name">%1$s</xliff:g> will be disconnected from sharing this Android TV device\'s Internet connection.</string>
+
+    <!-- Description of NFC in the 1st level settings screen, for an Android TV device. [CHAR LIMIT=NONE] -->
+    <string name="nfc_quick_toggle_summary" product="tv">Allow data exchange when the Android TV device touches another device</string>
+
+    <!-- Text warning about skipping Wi-Fi with a mobile connect (Android TV) [CHAR LIMIT=NONE]-->
+    <string name="wifi_skipped_message" product="tv">WARNING: if you skip Wi\u2011Fi, your Android TV device will only use mobile data for initial downloads and updates. To avoid possible data charges, connect to Wi\u2011Fi.</string>
+
+    <!-- Text warning about skipping Wi-Fi without a mobile connect (Android TV) [CHAR LIMIT=NONE] -->
+    <string name="wifi_and_mobile_skipped_message" product="tv">If you skip Wi\u2011Fi:\n\nYour Android TV device won\'t have an Internet connection.\n\nYou won\'t get software updates until you connect to the Internet.\n\nYou can\'t activate device protection features at this time.</string>
+    <!-- Text alerting that Wi-Fi couldn't connect (Android TV) [CHAR LIMIT=NONE] -->
+    <string name="wifi_connect_failed_message" product="tv">The Android TV device was unable to connect to this Wi\u2011Fi network.</string>
+
+    <string name="dock_audio_summary_none" product="tv">Android TV device not docked</string>
+
+    <!-- Dock settings screen, setting option summary text when check box is selected -->
+    <string name="dock_sounds_enable_summary_on" product="tv">Play sound when inserting or removing Android TV device from dock</string>
+
+    <!-- Sound settings screen, setting option summary text when check box is clear -->
+    <string name="dock_sounds_enable_summary_off" product="tv">Don\'t play sound when inserting or removing Android TV device from dock</string>
+
+    <!-- Sound & display settings screen, accelerometer-based rotation summary text when check box is selected -->
+    <string name="accelerometer_summary_on" product="tv">Switch orientation automatically when rotating Android TV device</string>
+
+    <!-- Sound & display settings screen, accelerometer-based rotation summary text when check box is clear -->
+    <string name="accelerometer_summary_off" product="tv">Switch orientation automatically when rotating Android TV device</string>
+
+    <!-- SIM card lock settings screen, setting option summary text when SIM lock check box is selected  [CHAR LIMIT=40] -->
+    <string name="sim_lock_on" product="tv">Require PIN to use Android TV device</string>
+
+    <!-- SIM card lock settings screen, setting option summary text when SIM lock check box is clear  [CHAR LIMIT=40] -->
+    <string name="sim_lock_off" product="tv">Require PIN to use Android TV device</string>
+
+    <!-- Advanced (used for diagnostics) device info activity title [CHAR LIMIT=40] -->
+    <string name="device_info_settings" product="tv">Android TV device status</string>
+
+    <!-- About Android TV device screen, summary of the item that takes you to Android TV device status screen -->
+    <string name="device_status_summary" product="tv">Status of information about your Android TV device</string>
+
+    <!-- About Android TV device, status item title.  The Mobile Directory Number [CHAR LIMIT=30] -->
+    <string name="status_number" product="tv">MDN</string>
+
+    <!-- SD card & phone storage settings screen, setting option summary text under Internal phone storage heading -->
+    <string name="master_clear_summary" product="tv">Erases all data on Android TV device</string>
+
+    <!-- SD card & phone storage settings screen, message on screen after user selects Factory data reset [CHAR LIMIT=NONE] -->
+    <string name="master_clear_desc" product="tv">This will erase all data from your Android TV device\'s <b>internal storage</b>, including:\n\n<li>Your Google account</li>\n<li>System and app data and settings</li>\n<li>Downloaded apps</li></string>
+
+    <!-- SD card & phone storage settings screen, button on screen after user selects Factory data reset -->
+    <string name="master_clear_button_text" product="tv">Reset Android TV device</string>
+
+    <!-- Bluetooth available subtext - shown when Bluetooth tethering is turned on but it is not currently tethered to any devices [CHAR LIMIT=50]-->
+    <string name="bluetooth_tethering_available_subtext" product="tv">Sharing this Android TV device\'s Internet connection</string>
+
+    <string name="bluetooth_tethering_device_connected_subtext" product="tv">Sharing this Android TV device\'s Internet connection to 1 device</string>
+
+    <!-- Bluetooth connected subtext - shown when multiple devices are tethered over Bluetooth [CHAR LIMIT=60]-->
+    <string name="bluetooth_tethering_devices_connected_subtext" product="tv">Sharing this Android TV device\'s Internet connection to <xliff:g id="connectedDeviceCount">%1$d</xliff:g> devices</string>
+
+    <!-- Bluetooth tethering off subtext - shown when Bluetooth Tethering is turned off [CHAR LIMIT=50]-->
+    <string name="bluetooth_tethering_off_subtext" product="tv">Not sharing this Android TV device\'s Internet connection</string>
+
+    <!-- [CHAR LIMIT=100] Security & location settings screen, setting check box summary for GPS satellites on a Android TV device -->
+    <string name="location_street_level" product="tv">Let apps use GPS on your Android TV device to pinpoint your location</string>
+
+    <!-- Main settings screen, setting title for the user to go into the About phone screen -->
+    <string name="about_settings" product="tv">About Android TV device</string>
+
+    <!-- Applications settings screen, message text of alert that appears if user selects the "Unknown sources" check box -->
+    <string name="install_all_warning" product="tv">Your Android TV device and personal data are more vulnerable to attack by apps
+ from unknown sources. You agree that you are solely responsible for any
+ damage to your Android TV device or loss of data that may result from using
+ these apps.</string>
+
+    <!-- Manage applications, individual application info screen, text that appears under the "Permissions" heading. This describes the permissions that the application has. -->
+    <string name="security_settings_desc" product="tv">This app can access the following on your Android TV device:</string>
+
+    <!-- [CHAR_LIMIT=NONE] Manage applications, individual application info screen, text that appears under the "Permissions" heading.
+         This describes the permissions that the application has.  It is used when multiple packages are contributing
+         to the permissions and need to be listed here. -->
+    <string name="security_settings_desc_multi" product="tv">This app can access the following on your Android TV device.
+         In order to improve performance and reduce memory usage, some of these permissions
+         are available to <xliff:g id="base_app_name">%1$s</xliff:g>
+         because it runs in the same process as <xliff:g id="additional_apps_list">%2$s</xliff:g>:</string>
+
+    <!-- Manage applications, text for Move button to move app to internal storage -->
+    <string name="move_app_to_internal" product="tv">Move to Android TV device</string>
+
+    <!-- Running service details, stop confirmation descriptive text. Displays when user selects selects to stop a system service. -->
+    <string name="runningservicedetails_stop_dlg_text" product="tv">If you stop this service, some
+        features of your Android TV device may stop working correctly until you power it off
+        and then on again.</string>
+
+    <!-- In the Testing screen.  The item title of the activity that shows a bunch of phone-related information.  -->
+    <string name="testing_phone_info" product="tv">Android TV device information</string>
+
+    <!-- Label for power consumed when Idle -->
+    <string name="power_idle" product="tv">Android TV device idle</string>
+
+    <!-- Label for Phone usage time -->
+    <string name="usage_type_phone" product="tv">Android TV device</string>
+
+    <!-- Description for standby detail -->
+    <string name="battery_desc_standby" product="tv">Battery used when Android TV device is idle</string>
+
+    <!-- Remove account message in dialog [CHAR LIMIT=NONE] -->
+    <string name="really_remove_account_message" product="tv">Removing this account will delete all of its messages, contacts, and other data from the Android TV device!</string>
+
+    <!--  Body of dialog shown when user enables global auto sync, for Android TV device [CHAR LIMIT=none] -->
+    <string name="data_usage_auto_sync_on_dialog" product="tv">Any changes you make to your accounts on the web will be automatically copied to your Android TV device.\n\nSome accounts may also automatically copy any changes you make on the Android TV device to the web. A Google Account works this way.</string>
+
+    <!-- Body of dialog shown before user limits mobile data usage. [CHAR LIMIT=NONE] -->
+    <string name="data_usage_limit_dialog_mobile" product="tv">Your Android TV device will turn off mobile data once it reaches the limit you set.\n\nSince data usage is measured by your Android TV device, and your carrier may account for usage differently, consider setting a conservative limit.</string>
+
+    <!-- Body of dialog shown before user restricts background data usage. This is for multiuser Android TV devices. [CHAR LIMIT=NONE] -->
+    <string name="data_usage_restrict_background_multiuser" product="tv">If you restrict background mobile data, some apps and services won\'t work unless you\'re connected to Wi\u2011Fi.\n\nThis setting affects all users on this Android TV device.</string>
+
+    <!-- Label displaying total network data transferred during a specific time period, including a disclaimer that contrasts device versus carrier reporting. [CHAR LIMIT=80] -->
+    <string name="data_usage_total_during_range_mobile" product="tv"><xliff:g id="range" example="Jul 1 - Jul 31">%2$s</xliff:g>: about <xliff:g id="total" example="128KB">%1$s</xliff:g> used, as measured by your Android TV device. Your carrier\'s data usage accounting may differ.</string>
+
+    <!-- Message to secondary users that only owner can manage users [CHAR LIMIT=none] -->
+    <string name="user_cannot_manage_message" product="tv">Only the Android TV device\'s owner can manage users.</string>
+
+    <!-- User (self) removal confirmation message [CHAR LIMIT=none] -->
+    <string name="user_confirm_remove_self_message" product="tv">You will lose your space and data on this Android TV device. You can\'t undo this action.</string>
+
+    <!-- Warning message when changing a global setting for an Android TV device.[CHAR LIMIT=none] -->
+    <string name="global_change_warning" product="tv">This setting affects all users on this Android TV device.</string>
+
+    <!-- Restrictions summary for allowing NFC transfers (Android TV) [CHAR LIMIT=100] -->
+    <string name="restriction_nfc_enable_summary" product="tv">Allow data exchange when the Android TV device touches another device</string>
+
+</resources>
