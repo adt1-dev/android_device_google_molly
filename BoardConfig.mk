@@ -33,7 +33,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyFIQ0 smsc95xx.boot_wol_config=0x07 smsc95xx.turbo_mode=N androidboot.selinux=permissive
 TARGET_KERNEL_SOURCE := kernel/google/molly
 TARGET_KERNEL_CONFIG := cyanogenmod_molly_defconfig
 
