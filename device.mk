@@ -39,6 +39,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AppDrawer
 
+# Set the screen density to be the same as stock
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.molly \
@@ -103,18 +106,26 @@ PRODUCT_PROPERTY_OVERRIDES += \
     service.adb.tcp.port=4321
 
 # Debugging
-ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.adb.secure=0 \
-    ro.secure=0 \
-    ro.debuggable=1
+# ADDITIONAL_DEFAULT_PROPERTIES += \
+#     ro.adb.secure=0 \
+#     ro.secure=0 \
+#     ro.debuggable=1
 
 # Set default USB interface
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp,adb
+# PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+#     persist.sys.usb.config=mtp,adb
 
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
+
+# Wifi
+PRODUCT_PROPERTY_OVERRIDES += wifi.interface=wlan0
+
+# Audio
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.cache-params=10240/20480/15 \
+    media.aac_51_output_enabled=true
 
 # Enable Widevine drm
 PRODUCT_PROPERTY_OVERRIDES += \
