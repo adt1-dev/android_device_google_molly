@@ -113,8 +113,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #     ro.debuggable=1
 
 # Set default USB interface
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+# PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+#     persist.sys.usb.config=mtp,adb
 
 # USB
 PRODUCT_PACKAGES += \
