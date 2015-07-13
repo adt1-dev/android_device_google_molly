@@ -95,6 +95,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+	device/google/molly/keylayout/Nexus_Remote.kl:system/usr/keylayout/Nexus_Remote.kl \
+	device/google/molly/keylayout/Vendor_2836_Product_0001.kl:system/usr/keylayout/Vendor_2836_Product_0001.kl
 
 # Add these from stock
 PRODUCT_COPY_FILES += \
