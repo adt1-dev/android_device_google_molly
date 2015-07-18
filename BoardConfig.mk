@@ -98,12 +98,10 @@ WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/mrvl/sd8797_uapsta.bin"
 MALLOC_IMPL := dlmalloc
 
 # TWRP
-DEVICE_RESOLUTION := 1920x1080
 TW_THEME := landscape_hdpi
 BOARD_HAS_NO_REAL_SDCARD := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_NO_SCREEN_TIMEOUT := true
 TW_NO_CPU_TEMP := true
-TW_EXCLUDE_MTP := true
 TW_BRIGHTNESS_PATH := "/brightness"
