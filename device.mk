@@ -65,12 +65,15 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf
+    $(LOCAL_PATH)/libaudio/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    audio.primary.molly \
     audio.r_submix.default \
     audio.usb.default
+
+USE_CUSTOM_AUDIO_POLICY := 1
 
 # Hdmi CEC: molly works as a playback device (4).
 PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4

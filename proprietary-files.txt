@@ -10,7 +10,6 @@ etc/firmware/tegra11x/nvhost_tsec.fw
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra.so
 lib/egl/libGLESv2_tegra.so
-lib/hw/audio.primary.molly.so
 lib/hw/gralloc.tegra4.so
 lib/hw/hdmi_cec.tegra4.so
 lib/hw/hwcomposer.tegra4.so
@@ -23,7 +22,6 @@ lib/libDxDrmServer.so
 lib/libEGL_tegra_impl.so
 lib/libGLESv1_CM_tegra_impl.so
 lib/libGLESv2_tegra_impl.so
-lib/libmolly_audio.so
 lib/libnvapputil.so
 lib/libnvavp.so
 lib/libnvblit.so
