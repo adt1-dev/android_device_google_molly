@@ -40,7 +40,8 @@ PRODUCT_PACKAGES += \
     AppDrawer
 
 # Set the screen density to be the same as stock
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320 \
+debug.sf.hw=1
 
 # Ramdisk
 PRODUCT_PACKAGES += \
