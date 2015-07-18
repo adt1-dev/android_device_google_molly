@@ -115,19 +115,9 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_CHARACTERISTICS := tv,nosdcard
 
-# Adb over TCP
-PRODUCT_PROPERTY_OVERRIDES += \
-    service.adb.tcp.port=4321
-
-# Debugging
-# ADDITIONAL_DEFAULT_PROPERTIES += \
-#     ro.adb.secure=0 \
-#     ro.secure=0 \
-#     ro.debuggable=1
-
 # Set default USB interface
-# PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-#     persist.sys.usb.config=mtp,adb
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+     persist.sys.usb.config=mtp
 
 # USB
 PRODUCT_PACKAGES += \
