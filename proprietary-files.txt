@@ -1,4 +1,4 @@
-bin/nvcgcserver
+bin/tf_daemon
 etc/DxDrmConfig.txt
 etc/enctune.conf
 etc/firmware/nvavp_aud_ucode.bin
@@ -16,7 +16,6 @@ lib/hw/hdmi_cec.tegra4.so
 lib/hw/hwcomposer.tegra4.so
 lib/hw/keystore.molly.so
 lib/libardrv_dynamic.so
-lib/libaudioavp.so
 lib/libcgdrv.so
 lib/libcplconnectclient.so
 lib/libdrmdecrypt.so
@@ -34,7 +33,6 @@ lib/libnvddk_2d.so
 lib/libnvddk_2d_v2.so
 lib/libnvfusebypass.so
 lib/libnvglsi.so
-lib/libnvmm_audio.so
 lib/libnvmm_contentpipe.so
 lib/libnvmm_image.so
 lib/libnvmmlite_audio.so
@@ -63,6 +61,7 @@ lib/libnvtnr.so
 lib/libnvtvmr.so
 lib/libnvwinsys.so
 lib/libnvwsi.so
+lib/libremotecontrolservice.so
 lib/libstagefrighthw.so
 lib/libtf_crypto_sst.so
 lib/libtsechdcp.so
