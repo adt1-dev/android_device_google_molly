@@ -1,4 +1,4 @@
-# Google ADT-1 Device Configuration 
+# Google ADT-1 ("molly") Device Configuration 
 
 ## Spec Sheet
 | Feature                 | Specification                                                                               |
@@ -7,8 +7,8 @@
 | Memory                  | 2GB LPDDR3<br/>16GB Storage                                                                 |
 | Network Interfaces      | 10/100 Ethernet<br/>802.11 a/b/g/ 2×2 MIMO WiFi<br/>Bluetooth  v4.0                         |
 | Ports                   | USB 2.0<br/>HDMI Out<br/>RJ-45 (Wired Internet)<br/>USB Mini-AB (Power Input/USB debugging) |
-| Shipped Android Version | L                                                                                           |
-| Gamepad                 | Bluetooth 3.0 (4.0 compatible)               												                        |
+| Shipped Android Version | L (later received an OTA to 5.0 Lollipop)                                                   |
+| Gamepad                 | Bluetooth 3.0 (4.0 compatible)               			                        |
 | Release Date            | June 25, 2014                                                                               |
 
 ## Device Picture
