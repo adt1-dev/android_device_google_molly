@@ -71,7 +71,8 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.molly \
     audio.r_submix.default \
-    audio.usb.default
+    audio.usb.default \
+    libtinyalsa
 
 USE_CUSTOM_AUDIO_POLICY := 1
 
