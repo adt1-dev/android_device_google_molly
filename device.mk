@@ -126,10 +126,15 @@ PRODUCT_PACKAGES += \
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += wifi.interface=wlan0
 
+# ADB Over Wifi
+PRODUCT_PROPERTY_OVERRIDES += \
+    service.adb.tcp.port=4321
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.cache-params=10240/20480/15 \
-    media.aac_51_output_enabled=true
+    media.aac_51_output_enabled=true \
+    persist.sys.media.avsync=true
 
 # Enable Widevine drm
 PRODUCT_PROPERTY_OVERRIDES += \
