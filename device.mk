@@ -40,6 +40,7 @@ PRODUCT_PACKAGES += \
     audio.primary.molly \
     audio.r_submix.default \
     audio.usb.default \
+    libaudiopolicymanager \
     libtinyalsa
 USE_CUSTOM_AUDIO_POLICY := 1
 PRODUCT_PROPERTY_OVERRIDES += \
