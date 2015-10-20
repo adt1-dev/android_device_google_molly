@@ -96,6 +96,7 @@ WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/mrvl/sd8797_uapsta.bin"
 #    domain.te \
 #    ueventd.te
 
+# Use dlmalloc
 MALLOC_IMPL := dlmalloc
 
 # TWRP
@@ -106,3 +107,7 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_NO_SCREEN_TIMEOUT := true
 TW_NO_CPU_TEMP := true
 TW_BRIGHTNESS_PATH := "/brightness"
+
+# Audio
+BOARD_USES_ALSA_AUDIO := true
+BOARD_USES_TINY_ALSA_AUDIO := true
