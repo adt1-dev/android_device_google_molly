@@ -22,7 +22,7 @@
 #include <stdint.h>
 #include <hardware/audio.h>
 
-#define kHDMI_ALSADeviceName    "IntelHDMI"
+#define kHDMI_ALSADeviceName    "Tegra"
 
 #ifdef __cplusplus
 extern "C"
