@@ -37,16 +37,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/libaudio/audio_policy.conf:system/etc/audio_policy.conf
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    audio.hdmi.tegra4 \
+    audio.primary.default \
     audio.primary.molly \
     audio.r_submix.default \
     audio.usb.default \
     libaudiopolicymanager \
-    libtinyalsa
+    libtinyalsa \
+    libaudiospdif \
+    libaudioutils
 USE_CUSTOM_AUDIO_POLICY := 1
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.cache-params=10240/20480/15 \
-    media.aac_51_output_enabled=true \
     persist.sys.media.avsync=true
 
 # Codec Configs

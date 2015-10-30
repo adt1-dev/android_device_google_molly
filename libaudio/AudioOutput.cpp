@@ -197,7 +197,7 @@ void AudioOutput::openPCMDevice() {
     Mutex::Autolock _l(mDeviceLock);
     if (NULL == mDevice) {
         struct pcm_config config;
-        int dev_id = 0;
+        int dev_id = 3;
         int retry = 0;
         static const int MAX_RETRY_COUNT = 3;
 
