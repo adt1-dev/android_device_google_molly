@@ -37,6 +37,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/libaudio/audio_policy.conf:system/etc/audio_policy.conf
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
+    audio.hdmi.tegra4 \
     audio.primary.default \
     audio.primary.molly \
     audio.r_submix.default \
