@@ -1,3 +1,4 @@
+-app/LeanbackIme/LeanbackIme.apk
 app/TungstenLEDService/TungstenLEDService.apk
 app/TungstenLEDService/lib/arm/libled_service_jni.so
 app/TvVoiceInput/TvVoiceInput.apk
@@ -85,3 +86,5 @@ priv-app/AtvRemoteService/AtvRemoteService.apk
 priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.so
 priv-app/GamepadPairingService/GamepadPairingService.apk
 priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
+-priv-app/LeanbackLauncher/LeanbackLauncher.apk
+-priv-app/TV/TV.apk
