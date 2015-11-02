@@ -453,7 +453,7 @@ void AudioOutput::doPCMWrite(const uint8_t* data, size_t len) {
     // involving the application level.  When this happens, the HDMI
     // audio device is put into the DISCONNECTED state, and calls to
     // write will return EBADFD.
-#if 1
+#if 0 // This used to be 1, but molly doesn't need the conversation because it natively supports 16bit PCM.
     /* Intel HDMI appears to be locked at 24bit PCM, but Android
      * only supports 16 or 32bit, so we have to convert to 24-bit
      * over 32 bit data type.
