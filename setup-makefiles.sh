@@ -258,7 +258,7 @@ echo "" >> $VENDOR_MAKEFILE
 echo "endif" >> ../../../$OUTDIR/proprietary/priv-app/Android.mk
 fi
 
-LIBS=`cat device-proprietary-files.txt | grep '\-lib' | cut -d'-' -f2 | head -1`
+LIBS=`cat proprietary-files.txt | grep '\-lib' | cut -d'-' -f2 | head -1`
 
 if [ -f ../../../$OUTDIR/proprietary/$LIBS ]; then
 (cat << EOF) > ../../../$OUTDIR/proprietary/lib/Android.mk
@@ -288,8 +288,8 @@ echo "# Prebuilt libs needed for compilation" >> $VENDOR_MAKEFILE
 echo "PRODUCT_PACKAGES += \\" >> $VENDOR_MAKEFILE
 
 LINEEND=" \\"
-COUNT=`cat device-proprietary-files.txt | grep '\-lib' | wc -l`
-for LIB in `cat device-proprietary-files.txt | grep '\-lib' | cut -d'/' -f2`;do
+COUNT=`cat proprietary-files.txt | grep '\-lib' | wc -l`
+for LIB in `cat proprietary-files.txt | grep '\-lib' | cut -d'/' -f2`;do
   COUNT=`expr $COUNT - 1`
   if [ $COUNT = "0" ]; then
     LINEEND=""
@@ -315,7 +315,7 @@ echo "" >> $VENDOR_MAKEFILE
 echo "endif" >> ../../../$OUTDIR/proprietary/lib/Android.mk
 fi
 
-VENDORLIBS=`cat device-proprietary-files.txt | grep '\-vendor\/lib' | cut -d'-' -f2 | head -1`
+VENDORLIBS=`cat proprietary-files.txt | grep '\-vendor\/lib' | cut -d'-' -f2 | head -1`
 
 if [ -f ../../../$OUTDIR/proprietary/$VENDORLIBS ]; then
 (cat << EOF) > ../../../$OUTDIR/proprietary/vendor/lib/Android.mk
@@ -345,8 +345,8 @@ echo "# Prebuilt vendor/libs needed for compilation" >> $VENDOR_MAKEFILE
 echo "PRODUCT_PACKAGES += \\" >> $VENDOR_MAKEFILE
 
 LINEEND=" \\"
-COUNT=`cat device-proprietary-files.txt | grep '\-vendor\/lib' | wc -l`
-for VENDORLIB in `cat device-proprietary-files.txt | grep '\-vendor\/lib' | cut -d'/' -f3`;do
+COUNT=`cat proprietary-files.txt | grep '\-vendor\/lib' | wc -l`
+for VENDORLIB in `cat proprietary-files.txt | grep '\-vendor\/lib' | cut -d'/' -f3`;do
   COUNT=`expr $COUNT - 1`
   if [ $COUNT = "0" ]; then
     LINEEND=""
