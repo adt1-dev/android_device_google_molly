@@ -70,7 +70,7 @@ status_t HDMIAudioOutput::setupForStream(const AudioStreamOut& stream)
     return initCheck();
 }
 
-#define IEC958_AES0_PROFESSIONAL (1«0) /**< 0 = consumer, 1 = professional */
+#define IEC958_AES0_NONAUDIO      (1<<1)   /* 0 = audio, 1 = non-audio */
 
 void HDMIAudioOutput::applyPendingVolParams()
 {
