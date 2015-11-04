@@ -91,7 +91,7 @@ void AudioOutput::setupInternal() {
     mMaxDelayCompFrames = kMaxDelayCompensationMSec * mFramesPerSec / 1000;
 
 #if 1
-    mBytesPerSample = ((mALSAFormat == PCM_FORMAT_S16_LE) ? 2 : 4);
+    mBytesPerSample = ((mALSAFormat == PCM_FORMAT_S32_LE) ? 4 : 2);
 #else
     switch (mALSAFormat) {
     case PCM_FORMAT_S16_LE:
