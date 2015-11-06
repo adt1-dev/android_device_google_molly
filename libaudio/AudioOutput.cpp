@@ -90,7 +90,7 @@ void AudioOutput::setupInternal() {
 
     mMaxDelayCompFrames = kMaxDelayCompensationMSec * mFramesPerSec / 1000;
 
-#if 1
+#if 0
     mBytesPerSample = ((mALSAFormat == PCM_FORMAT_S32_LE) ? 4 : 2);
 #else
     switch (mALSAFormat) {
@@ -104,8 +104,8 @@ void AudioOutput::setupInternal() {
         mBytesPerSample = 4;
         break;
     default:
-        ALOGE("Unexpected alsa format 0x%x, setting mBytesPerSample to 3", mALSAFormat);
-        mBytesPerSample = 3;
+        ALOGE("Unexpected alsa format 0x%x, setting mBytesPerSample to 2", mALSAFormat);
+        mBytesPerSample = 2;
         break;
     }
 #endif
