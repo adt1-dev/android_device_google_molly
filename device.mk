@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
 
 # Misc
 PRODUCT_TAGS += dalvik.gc.type-precise
-PRODUCT_CHARACTERISTICS := tv,nosdcard
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 
 # Permissions
