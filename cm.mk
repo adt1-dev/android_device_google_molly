@@ -2,7 +2,7 @@
 $(call inherit-product, device/google/molly/full_molly.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tv.mk)
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 TARGET_SCREEN_HEIGHT := 1080
 TARGET_SCREEN_WIDTH := 1920
