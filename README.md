@@ -1,3 +1,7 @@
+The defualt ADT-1 (Molly) CM-12.1 configuration is limited to TV features., i.e. no Navigation Bar/Status Bar. The goal of the cm-12.1-full branch is to restore the defualt CyanogenMod Tablet Configuration. This /should/ build in current CM-12.1 source trees, granted of course you have synced in all the repos that Molly depends on (found here: github.com/adt1-dev). I will do my best to keep this up to date with the TV configuration tree.
+
+Please ignore the aosp-5.1.1 branch for now. It is a placeholder. Nothing more than a CM kang to help remond myself to work on that at some point. (Feel free to jump in and help though!)
+
 # Google ADT-1 ("molly") Device Configuration 
 
 ## Spec Sheet

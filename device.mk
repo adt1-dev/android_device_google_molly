@@ -89,8 +89,8 @@ PRODUCT_COPY_FILES += \
 
 # Misc
 PRODUCT_TAGS += dalvik.gc.type-precise
-PRODUCT_CHARACTERISTICS := tv,nosdcard
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=240
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -102,8 +102,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml \
-    $(LOCAL_PATH)/permissions/tv_core_hardware.xml:system/etc/permissions/tv_core_hardware.xml \
     $(LOCAL_PATH)/permissions/molly_hardware.xml:system/etc/permissions/molly_hardware.xml
 
 # Ramdisk
@@ -115,13 +115,13 @@ PRODUCT_PACKAGES += \
 
 # TV-specific Apps/Packages
 PRODUCT_PACKAGES += \
-    TvProvider \
-    TvSettings \
-    tv_input.default \
-    AppDrawer \
-    LeanbackLauncher \
+#    TvProvider \
+#    TvSettings \
+#    tv_input.default \
+#    AppDrawer \
+#    LeanbackLauncher \
     LeanbackIme \
-    TV
+#    TV
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
