@@ -116,8 +116,8 @@ PRODUCT_PACKAGES += \
 # TV-specific Apps/Packages
 PRODUCT_PACKAGES += \
     TvProvider \
-    TvSettings \
-    tv_input.default \
+#    TvSettings \
+#    tv_input.default \
     AppDrawer \
     LeanbackLauncher \
     LeanbackIme \
