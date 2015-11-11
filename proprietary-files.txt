@@ -72,6 +72,13 @@ lib/libtf_crypto_sst.so
 lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 lib/libtungsten_led.so
+priv-app/AtvRemoteService/AtvRemoteService.apk
+priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.so
+priv-app/GamepadPairingService/GamepadPairingService.apk
+priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
+-priv-app/LeanbackLauncher/LeanbackLauncher.apk
+-priv-app/Overscan/Overscan.apk
+-priv-app/TV/TV.apk
 vendor/firmware/mrvl/sd8797_uapsta.bin
 vendor/firmware/mrvl/txpower_JP.bin
 vendor/firmware/mrvl/txpower_US.bin
@@ -82,9 +89,3 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libDxModularPluginNv.so
 vendor/lib/mediadrm/libwvdrmengine.so
-priv-app/AtvRemoteService/AtvRemoteService.apk
-priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.so
-priv-app/GamepadPairingService/GamepadPairingService.apk
-priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
--priv-app/LeanbackLauncher/LeanbackLauncher.apk
--priv-app/TV/TV.apk

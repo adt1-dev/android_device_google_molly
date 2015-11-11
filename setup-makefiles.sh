@@ -121,7 +121,7 @@ for APK in `ls ../../../$OUTDIR/proprietary/app/*/*apk`; do
   fi
     apkname=`basename $APK`
     apkmodulename=`echo $apkname|sed -e 's/\.apk$//gi'`
-  if [[ $apkmodulename = LeanbackIme || $apkmodulename = TungstenLEDService || $apkmodulename = TvVoiceInput ]]; then
+  if [[ $apkmodulename = LeanbackIme ]]; then
     signature="PRESIGNED"
   else
     signature="platform"
@@ -234,7 +234,7 @@ for PRIVAPK in `ls ../../../$OUTDIR/proprietary/priv-app/*/*apk`; do
   fi
     privapkname=`basename $PRIVAPK`
     privmodulename=`echo $privapkname|sed -e 's/\.apk$//gi'`
-  if [[ $privmodulename = LeanbackLauncher  || $privmodulename = TV || $privmodulename = AtvRemoteService || $privmodulename = GamepadPairingService || $privmodulename = GlobalKeyInterceptor ]]; then
+  if [[ $privmodulename = LeanbackLauncher  || $privmodulename = TV ]]; then
     signature="PRESIGNED"
   else
     signature="platform"
