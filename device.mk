@@ -116,13 +116,15 @@ PRODUCT_PACKAGES += \
 
 # TV-specific Apps/Packages
 PRODUCT_PACKAGES += \
-    TvProvider \
-    TvSettings \
-    tv_input.default \
     AppDrawer \
     LeanbackLauncher \
     LeanbackIme \
+    Overscan \
+    TvProvider \
+    TvSettings \
+    tv_input.default \
     TV
+
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
