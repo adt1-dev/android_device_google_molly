@@ -11,6 +11,11 @@ etc/firmware/nvavp_os_eff00000.bin
 etc/firmware/nvavp_vid_ucode_alt.bin
 etc/firmware/tegra11x/nvhost_msenc02.fw
 etc/firmware/tegra11x/nvhost_tsec.fw
+etc/permissions/com.google.widevine.software.drm.xml
+etc/permissions/nrdp.xml
+framework/com.google.widevine.software.drm.jar
+lib/crtbegin_so.o
+lib/crtend_so.o
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra.so
 lib/egl/libGLESv2_tegra.so
@@ -18,6 +23,7 @@ lib/hw/gralloc.tegra4.so
 lib/hw/hdmi_cec.tegra4.so
 lib/hw/hwcomposer.tegra4.so
 lib/hw/keystore.molly.so
+lib/hw/tv_input.default.so
 lib/libardrv_dynamic.so
 lib/libaudioavp.so
 lib/libcgdrv.so
