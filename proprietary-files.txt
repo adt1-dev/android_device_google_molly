@@ -14,6 +14,8 @@ etc/firmware/tegra11x/nvhost_tsec.fw
 etc/permissions/com.google.widevine.software.drm.xml
 etc/permissions/nrdp.xml
 framework/com.google.widevine.software.drm.jar
+lib/crtbegin_so.o
+lib/crtend_so.o
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra.so
 lib/egl/libGLESv2_tegra.so
