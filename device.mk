@@ -119,7 +119,6 @@ PRODUCT_PACKAGES += \
     AppDrawer \
     LeanbackLauncher \
     LeanbackIme \
-    Overscan \
     TvProvider \
     TvSettings \
     tv_input.default \
