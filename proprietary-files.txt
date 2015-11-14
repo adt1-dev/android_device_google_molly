@@ -11,7 +11,9 @@ etc/firmware/nvavp_os_eff00000.bin
 etc/firmware/nvavp_vid_ucode_alt.bin
 etc/firmware/tegra11x/nvhost_msenc02.fw
 etc/firmware/tegra11x/nvhost_tsec.fw
+etc/permissions/com.google.widevine.software.drm.xml
 etc/permissions/nrdp.xml
+-framework/com.google.widevine.software.drm.jar
 lib/crtbegin_so.o
 lib/crtend_so.o
 lib/egl/libEGL_tegra.so
