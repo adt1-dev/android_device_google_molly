@@ -79,7 +79,8 @@ lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 lib/libtungsten_led.so
 -priv-app/AtvRemoteService/AtvRemoteService.apk
--priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.so
+-priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.
+-priv-app/GamepadPairingService/GamepadPairingService.apk
 -priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
 -priv-app/LeanbackLauncher/LeanbackLauncher.apk
 -priv-app/Overscan/Overscan.apk
