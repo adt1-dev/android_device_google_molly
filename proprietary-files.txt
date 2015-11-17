@@ -82,10 +82,8 @@ priv-app/AtvRemoteService/AtvRemoteService.apk
 -priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.
 -priv-app/GamepadPairingService/GamepadPairingService.apk
 priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
--priv-app/LeanbackLauncher/LeanbackLauncher.apk
 -priv-app/Overscan/Overscan.apk
 -priv-app/RemoteControlService/RemoteControlService.apk
--priv-app/TV/TV.apk
 vendor/firmware/mrvl/sd8797_uapsta.bin
 vendor/firmware/mrvl/txpower_JP.bin
 vendor/firmware/mrvl/txpower_US.bin
