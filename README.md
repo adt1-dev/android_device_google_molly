@@ -1,6 +1,8 @@
-The defualt ADT-1 (Molly) CM-12.1 configuration is limited to TV features., i.e. no Navigation Bar/Status Bar. The goal of the cm-12.1-tablet branch is to restore the defualt CyanogenMod Tablet Configuration. It retains a few if the TV apps that remain useful: LeanbackIME & Overscan.
+The defualt ADT-1 (Molly) CM-12.1 configuration is limited to TV features., i.e. no Navigation Bar/Status Bar. The goal of the cm-12.1-tablet branch is to restore the defualt CyanogenMod Tablet Configuration.
 
 To opt to use this instead of the default TV configuration, edit your roomservice.xml, and append this to the end of the "device/google/molly" entry: revision="cm-12.1-tablet"
+
+Please do not attempt to use the provided TV GApps with this. It will end in a TON of singature mismatches. Please use the latest OpenGApps-ARM-Mini package on www.opengapps.org
 
 # Google ADT-1 ("molly") Device Configuration 
 
