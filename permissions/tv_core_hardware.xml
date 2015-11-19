@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2010 The Android Open Source Project
+<!-- Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
 
-          http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,14 +14,23 @@
      limitations under the License.
 -->
 
-<!-- These are the hardware components that a molly includes.
--->
 <permissions>
-    <feature name="android.hardware.bluetooth" />
-    <feature name="android.hardware.bluetooth_le" />
-    <feature name="android.hardware.microphone" />
+
+    <!-- These are the hardware components that all television devices must
+         include.  Devices with optional hardware must also include extra hardware
+         files.
+    -->
+    <feature name="android.hardware.location" />
+    <feature name="android.hardware.location.network" />
     <feature name="android.hardware.screen.landscape" />
     <feature name="android.hardware.type.television" />
-    <feature name="android.software.backup" />
+
     <feature name="android.software.app_widgets" />
+    <feature name="android.software.backup" />
+    <feature name="android.software.leanback" />
+    <feature name="android.software.leanback_only" />
+    <feature name="android.software.live_tv" />
+    <feature name="android.software.print" />
+    <feature name="android.software.voice_recognizers" />
+
 </permissions>
