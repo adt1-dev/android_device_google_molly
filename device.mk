@@ -37,19 +37,25 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/libaudio/audio_policy.conf:system/etc/audio_policy.conf
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    audio.hdmi.tegra4 \
+    audio_policy.default \
     audio.primary.default \
     audio.primary.molly \
     audio.r_submix.default \
     audio.usb.default \
+    libaudiopolicyservice \
     libaudiopolicymanager \
+    libaudiopolicymanagerdefault \
     libtinyalsa \
     libaudiospdif \
-    libaudioutils
+    libaudioutils \
+    libaudioresampler
+
 USE_CUSTOM_AUDIO_POLICY := 1
+
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.cache-params=10240/20480/15 \
-    persist.sys.media.avsync=true
+    persist.sys.media.avsync=true \
+    media.aac_51_output_enabled=true
 
 # Codec Configs
 PRODUCT_COPY_FILES += \
@@ -89,6 +95,7 @@ PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
+	frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.hdmi.cec.xml:system/etc/permissions/android.hardware.hdmi.cec.xml \
     frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
@@ -110,10 +117,14 @@ PRODUCT_PACKAGES += \
 
 # TV-specific Apps/Packages
 PRODUCT_PACKAGES += \
+    AppDrawer \
+    LeanbackLauncher \
+    LeanbackIme \
     TvProvider \
     TvSettings \
     tv_input.default \
-    AppDrawer
+    TV
+
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
