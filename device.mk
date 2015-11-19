@@ -37,19 +37,25 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/libaudio/audio_policy.conf:system/etc/audio_policy.conf
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    audio.hdmi.tegra4 \
+    audio_policy.default \
     audio.primary.default \
     audio.primary.molly \
     audio.r_submix.default \
     audio.usb.default \
+    libaudiopolicyservice \
     libaudiopolicymanager \
+    libaudiopolicymanagerdefault \
     libtinyalsa \
     libaudiospdif \
-    libaudioutils
+    libaudioutils \
+    libaudioresampler
+
 USE_CUSTOM_AUDIO_POLICY := 1
+
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.cache-params=10240/20480/15 \
-    persist.sys.media.avsync=true
+    persist.sys.media.avsync=true \
+    media.aac_51_output_enabled=true
 
 # Codec Configs
 PRODUCT_COPY_FILES += \
@@ -83,12 +89,13 @@ PRODUCT_COPY_FILES += \
 
 # Misc
 PRODUCT_TAGS += dalvik.gc.type-precise
-PRODUCT_CHARACTERISTICS := tv,nosdcard
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
+PRODUCT_CHARACTERISTICS := tablet,nosdcard
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=240
 
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.hdmi.cec.xml:system/etc/permissions/android.hardware.hdmi.cec.xml \
     frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
@@ -96,9 +103,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml \
-    $(LOCAL_PATH)/permissions/com.google.android.tv.installed.xml:system/etc/permissions/com.google.android.tv.installed.xml \
-    $(LOCAL_PATH)/permissions/tv_core_hardware.xml:system/etc/permissions/tv_core_hardware.xml \
     $(LOCAL_PATH)/permissions/molly_hardware.xml:system/etc/permissions/molly_hardware.xml
 
 # Ramdisk
@@ -110,10 +116,15 @@ PRODUCT_PACKAGES += \
 
 # TV-specific Apps/Packages
 PRODUCT_PACKAGES += \
-    TvProvider \
-    TvSettings \
-    tv_input.default \
-    AppDrawer
+#    AppDrawer \
+#    LeanbackLauncher \
+#    LeanbackIme \
+#    Overscan \
+#    TvProvider \
+#    TvSettings \
+#    tv_input.default \
+#    TV
+
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

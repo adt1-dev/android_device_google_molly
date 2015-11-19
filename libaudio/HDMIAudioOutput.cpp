@@ -31,7 +31,7 @@ namespace android {
 extern AudioHardwareOutput gAudioHardwareOutput;
 
 HDMIAudioOutput::HDMIAudioOutput()
-    : AudioOutput(kHDMI_ALSADeviceName, PCM_FORMAT_S24_LE)
+    : AudioOutput(kHDMI_ALSADeviceName, PCM_FORMAT_S16_LE)
 {
 }
 

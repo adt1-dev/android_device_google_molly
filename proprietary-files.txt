@@ -1,6 +1,6 @@
+-app/LeanbackIme/LeanbackIme.apk
 app/TungstenLEDService/TungstenLEDService.apk
 app/TungstenLEDService/lib/arm/libled_service_jni.so
-app/TvVoiceInput/TvVoiceInput.apk
 bin/nvcgcserver
 etc/DxDrmConfig.txt
 etc/enctune.conf
@@ -10,6 +10,11 @@ etc/firmware/nvavp_os_eff00000.bin
 etc/firmware/nvavp_vid_ucode_alt.bin
 etc/firmware/tegra11x/nvhost_msenc02.fw
 etc/firmware/tegra11x/nvhost_tsec.fw
+etc/permissions/com.google.widevine.software.drm.xml
+etc/permissions/nrdp.xml
+-framework/com.google.widevine.software.drm.jar
+lib/crtbegin_so.o
+lib/crtend_so.o
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra.so
 lib/egl/libGLESv2_tegra.so
@@ -17,6 +22,7 @@ lib/hw/gralloc.tegra4.so
 lib/hw/hdmi_cec.tegra4.so
 lib/hw/hwcomposer.tegra4.so
 lib/hw/keystore.molly.so
+lib/hw/tv_input.default.so
 lib/libardrv_dynamic.so
 lib/libaudioavp.so
 lib/libcgdrv.so
@@ -71,6 +77,12 @@ lib/libtf_crypto_sst.so
 lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 lib/libtungsten_led.so
+priv-app/AtvRemoteService/AtvRemoteService.apk
+-priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.
+-priv-app/GamepadPairingService/GamepadPairingService.apk
+priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
+-priv-app/Overscan/Overscan.apk
+-priv-app/RemoteControlService/RemoteControlService.apk
 vendor/firmware/mrvl/sd8797_uapsta.bin
 vendor/firmware/mrvl/txpower_JP.bin
 vendor/firmware/mrvl/txpower_US.bin
@@ -81,7 +93,3 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/mediadrm/libDxModularPluginNv.so
 vendor/lib/mediadrm/libwvdrmengine.so
-priv-app/AtvRemoteService/AtvRemoteService.apk
-priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.so
-priv-app/GamepadPairingService/GamepadPairingService.apk
-priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk

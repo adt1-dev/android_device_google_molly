@@ -19,9 +19,7 @@
 
 #include "alsa_utils.h"
 
-#ifndef ALSA_UTILS_PRINT_FORMATS
 #define ALSA_UTILS_PRINT_FORMATS  1
-#endif
 
 int find_alsa_card_by_name(const char* name) {
     int card_id = 0;

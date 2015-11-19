@@ -21,7 +21,6 @@
     <feature name="android.hardware.bluetooth_le" />
     <feature name="android.hardware.microphone" />
     <feature name="android.hardware.screen.landscape" />
-    <feature name="android.hardware.type.television" />
     <feature name="android.software.backup" />
     <feature name="android.software.app_widgets" />
 </permissions>
