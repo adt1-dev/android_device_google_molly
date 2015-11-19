@@ -13,7 +13,7 @@ Please do not attempt to use the provided TV GApps with this. It will end in a T
 | Memory                  | 2GB LPDDR3<br/>16GB Storage                                                                 |
 | Network Interfaces      | 10/100 Ethernet<br/>802.11 a/b/g/ 2×2 MIMO WiFi<br/>Bluetooth  v4.0                         |
 | Ports                   | USB 2.0<br/>HDMI Out<br/>RJ-45 (Wired Internet)<br/>USB Mini-AB (Power Input/USB debugging) |
-| Shipped Android Version | L (later received an OTA to 5.0 Lollipop)                                                   |
+| Shipped Android Version |4.4.4 KitKat (Test TV Version) later received an OTA through L-Previews, and finally, to 5.0.2 Lollipop(LRX22G)                                                  |
 | Gamepad                 | Bluetooth 3.0 (4.0 compatible)               			                        |
 | Release Date            | June 25, 2014                                                                               |
 
