@@ -1,4 +1,4 @@
-# Google ADT-1 Device Configuration 
+# Google ADT-1 ("molly") Device Configuration 
 
 ## Spec Sheet
 | Feature                 | Specification                                                                               |
@@ -7,8 +7,8 @@
 | Memory                  | 2GB LPDDR3<br/>16GB Storage                                                                 |
 | Network Interfaces      | 10/100 Ethernet<br/>802.11 a/b/g/ 2×2 MIMO WiFi<br/>Bluetooth  v4.0                         |
 | Ports                   | USB 2.0<br/>HDMI Out<br/>RJ-45 (Wired Internet)<br/>USB Mini-AB (Power Input/USB debugging) |
-| Shipped Android Version | L                                                                                           |
-| Gamepad                 | Bluetooth 3.0 (4.0 compatible)               												                        |
+| Shipped Android Version | 4.4.4 KitKat (Test TV Version), later received OTA's through  the L-Previews, and finally, to 5.0.2 Lollipop (LRX22G)                                                             |
+| Gamepad                 | Bluetooth 3.0 (4.0 compatible)               			                        |
 | Release Date            | June 25, 2014                                                                               |
 
 ## Device Picture
@@ -18,7 +18,7 @@
 
 ```
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
