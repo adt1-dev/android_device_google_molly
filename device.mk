@@ -115,7 +115,7 @@ PRODUCT_PACKAGES += \
     ueventd.molly.rc
 
 # TV-specific Apps/Packages
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
 #    AppDrawer \
 #    LeanbackLauncher \
 #    LeanbackIme \
@@ -124,7 +124,6 @@ PRODUCT_PACKAGES += \
 #    TvSettings \
 #    tv_input.default \
 #    TV
-
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
