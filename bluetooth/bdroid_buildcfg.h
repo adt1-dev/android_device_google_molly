@@ -73,5 +73,3 @@
 #define BTM_LOCAL_IO_CAPS BTM_IO_CAP_OUT
 
 #endif
-
-#endif
