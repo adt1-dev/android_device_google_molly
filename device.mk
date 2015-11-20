@@ -115,11 +115,11 @@ PRODUCT_PACKAGES += \
     ueventd.molly.rc
 
 # TV-specific Apps/Packages
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
 #    AppDrawer \
 #    LeanbackLauncher \
-    LeanbackIme \
-    Overscan \
+#    LeanbackIme \
+#    Overscan \
 #    TvProvider \
 #    TvSettings \
 #    tv_input.default \

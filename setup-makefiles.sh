@@ -2,7 +2,7 @@
 
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
-VENDOR_MAKEFILE=../../../$OUTDIR/device-vendor.mk
+VENDOR_MAKEFILE=../../../$OUTDIR/molly-vendor.mk
 YEAR=`date +"%Y"`
 
 (cat << EOF) > $MAKEFILE

@@ -19,7 +19,6 @@
 
 TARGET_SPECIFIC_HEADER_PATH := device/google/molly/include
 
-
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 BOARD_USES_TINY_ALSA_AUDIO := true
