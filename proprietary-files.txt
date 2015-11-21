@@ -76,18 +76,9 @@ lib/libtf_crypto_sst.so
 lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 lib/libtungsten_led.so
-<<<<<<< HEAD
-priv-app/AtvRemoteService/AtvRemoteService.apk
--priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.
-=======
->>>>>>> cm-12.1-tablet
 -priv-app/GamepadPairingService/GamepadPairingService.apk
 priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
 -priv-app/RemoteControlService/RemoteControlService.apk
-<<<<<<< HEAD
->>>>>>> origin/cm-12.1-tablet
-=======
->>>>>>> cm-12.1-tablet
 vendor/firmware/mrvl/sd8797_uapsta.bin
 vendor/firmware/mrvl/txpower_JP.bin
 vendor/firmware/mrvl/txpower_US.bin
