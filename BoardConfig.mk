@@ -70,6 +70,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 8388608
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13912506368
+BOARD_CACHEIMAGE_PARTITION_SIZE := 734003200
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Recovery
@@ -104,13 +105,14 @@ WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/mrvl/sd8797_uapsta.bin"
 #    device/google/molly/sepolicy
 
 #BOARD_SEPOLICY_UNION := \
-#    file_contexts \
 #    app.te \
 #    device.te \
-#    drmserver.te \
-#    init_shell.te \
-#    file.te \
-#    system.te \
-#    zygote.te \
 #    domain.te \
-#    ueventd.te
+#    drmserver.te \
+#    file_contexts \
+#    file.te \
+#    init_shell.te \
+#    system.te \
+#    ueventd.te \
+#    zygote.te
+
