@@ -117,6 +117,7 @@ PRODUCT_PACKAGES += \
 # TV-specific Apps/Packages
 PRODUCT_PACKAGES += \
     AppDrawer \
+    CMLeanbackCustomizer \
     LeanbackLauncher \
     LeanbackIme \
     TvProvider \
