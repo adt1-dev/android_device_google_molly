@@ -58,4 +58,11 @@
 
     <!-- Flag indicating if device supports EAP SIM, AKA, AKA' -->
     <bool name="config_eap_sim_based_auth_supported">false</bool>
+
+    <!-- Wifi Dual Band support -->
+    <bool name="config_wifi_dual_band_support">true</bool>
+    
+    <!-- Wifi background scan support -->
+    <bool name="config_wifi_background_scan_support">true</bool>
+
 </resources>
