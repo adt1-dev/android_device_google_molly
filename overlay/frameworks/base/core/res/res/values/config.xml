@@ -86,4 +86,7 @@
     <!-- Wifi background scan support -->
     <bool name="config_wifi_background_scan_support">true</bool>
 
+    <!-- Disable default bluetooth profiles -->
+    <bool name="config_bluetooth_default_profiles">false</bool>
+
 </resources>
