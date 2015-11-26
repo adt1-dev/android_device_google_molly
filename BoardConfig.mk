@@ -87,6 +87,9 @@ TW_NO_SCREEN_TIMEOUT := true
 TW_NO_CPU_TEMP := true
 TW_BRIGHTNESS_PATH := "/brightness"
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/google/molly/releasetools
+
 # Wifi related defines
 BOARD_HAVE_MARVELL_WIFI          := true
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211

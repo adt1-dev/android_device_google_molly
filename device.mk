@@ -125,6 +125,10 @@ PRODUCT_PACKAGES += \
 #    tv_input.default \
 #    TV
 
+# Make sure the above actually get removed
+PRODUCT_COPY_FILES += \
+    device/google/molly/releasetools/tablet_build.sh:install/bin/tablet_build.sh
+
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
      persist.sys.usb.config=mtp
