@@ -32,6 +32,9 @@
 # wifi
 /system/bin/wifi_loader.sh		u:object_r:wifi_loader_exec:s0
 
+# gps
+/system/bin/glgps_nvidiaTegra2android	u:object_r:gpsd_exec:s0
+
 # set_hwui_params.sh -- set android hwui parameters on boot time
 /system/bin/set_hwui_params.sh		u:object_r:set_hwui_exec:s0
 
