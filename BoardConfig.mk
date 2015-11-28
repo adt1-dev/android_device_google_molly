@@ -35,6 +35,7 @@ TARGET_BOARD_PLATFORM := tegra4
 TARGET_BOOTLOADER_BOARD_NAME := molly
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+TARGET_TEGRA_VERSION := t114
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -87,6 +88,13 @@ TW_NO_SCREEN_TIMEOUT := true
 TW_NO_CPU_TEMP := true
 TW_BRIGHTNESS_PATH := "/brightness"
 
+# SELinux
+include device/nvidia/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += \
+#    device/google/molly/sepolicy
+
+#BOARD_SEPOLICY_UNION += \
+
 # Wifi related defines
 BOARD_HAVE_MARVELL_WIFI          := true
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
@@ -97,22 +105,3 @@ BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_mrvl
 WIFI_DRIVER_FW_PATH_AP           := "/vendor/firmware/mrvl/sd8797_uapsta.bin"
 WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/mrvl/sd8797_uapsta.bin"
-
-# Anything below this line is being shunned and therefore not alphabetized.
-
-# SELINUX Defines
-#BOARD_SEPOLICY_DIRS := \
-#    device/google/molly/sepolicy
-
-#BOARD_SEPOLICY_UNION := \
-#    app.te \
-#    device.te \
-#    domain.te \
-#    drmserver.te \
-#    file_contexts \
-#    file.te \
-#    init_shell.te \
-#    system.te \
-#    ueventd.te \
-#    zygote.te
-
