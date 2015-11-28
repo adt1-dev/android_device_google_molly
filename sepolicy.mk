@@ -1,7 +1,6 @@
 # Board specific SELinux policy variable definitions
 BOARD_SEPOLICY_DIRS += \
-    device/nvidia/sepolicy/common \
-    device/nvidia/sepolicy/$(TARGET_TEGRA_VERSION)
+    device/nvidia/sepolicy/common
 
 BOARD_SEPOLICY_UNION += \
     app.te \
@@ -47,6 +46,3 @@ BOARD_SEPOLICY_UNION += \
     wl18xx.te \
     wpa.te \
     zygote.te
-    
-
--include device/qcom/sepolicy/$(TARGET_TEGRA_VERSION)/Android.mk
