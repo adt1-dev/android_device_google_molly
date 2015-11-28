@@ -39,9 +39,6 @@ allow system_server throughput_device:chr_file { open read write ioctl };
 
 allow system_server phsd_data:sock_file { write };
 
-# lbh partition
-r_dir_file(system_server, lbh_file)
-
 # language settings
 allow system_server default_prop:property_service set;
 

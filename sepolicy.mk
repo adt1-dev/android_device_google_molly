@@ -7,11 +7,9 @@ BOARD_SEPOLICY_UNION += \
     app.te \
     bluetooth.te \
     bootanim.te \
-    camera_lbh.te \
     cpuvoltcap.te \
     debuggerd.te \
     device.te \
-    dex2oat.te \
     domain.te \
     drmserver.te \
     dumpstate.te \
@@ -24,8 +22,6 @@ BOARD_SEPOLICY_UNION += \
     hostapd.te \
     init.te \
     installd.te \
-    lbh-setup.te \
-    link_lbh.te \
     mediaserver.te \
     netd.te \
     platform_app.te \

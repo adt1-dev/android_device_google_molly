@@ -18,10 +18,5 @@ allow bootanim self:process execmem;
 # tegra_sema
 allow bootanim video_device:chr_file { open read write ioctl };
 
-# lbh_file
-allow bootanim lbh_file:dir search;
-allow bootanim lbh_file:file read;
-allow bootanim lbh_file:file open;
-
 # com.nvidia.NvCPLSvc
 allow bootanim system_app_data_file:dir search;

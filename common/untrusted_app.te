@@ -24,9 +24,6 @@ allow untrusted_app throughput_device:chr_file { open read write ioctl };
 # tegra_sema
 allow untrusted_app video_device:chr_file { open read write ioctl };
 
-# lbh partition
-r_dir_file(untrusted_app, lbh_file)
-
 # camera app access sys/devices/soc*/...
 allow untrusted_app sysfs_soc:file r_file_perms;
 allow untrusted_app sysfs_soc:dir r_dir_perms;

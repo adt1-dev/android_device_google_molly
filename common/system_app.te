@@ -54,9 +54,6 @@ allow system_app throughput_device:chr_file { open read write ioctl };
 
 allow system_app phsd_data:sock_file { write };
 
-# lbh partition
-r_dir_file(system_app, lbh_file)
-
 # com.nvidia.NvCPLSvc
 allow system_app system_app_data_file:dir search;
 allow system_app system_app_data_file:lnk_file r_file_perms;

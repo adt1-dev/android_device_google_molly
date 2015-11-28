@@ -24,8 +24,5 @@ unix_socket_send(platform_app, phsd, ussrd)
 # tegra_sema
 allow platform_app video_device:chr_file { open read write ioctl };
 
-# lbh partition
-r_dir_file(platform_app, lbh_file)
-
 # com.nvidia.NvCPLSvc
 allow platform_app system_app_data_file:dir search;

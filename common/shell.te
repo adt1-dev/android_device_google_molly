@@ -12,9 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# lbh partition
-r_dir_file(shell, lbh_file)
-
 allow shell quadd_device:chr_file rw_file_perms;
 
 # tegra_sema

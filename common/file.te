@@ -84,9 +84,6 @@ type fuseblk, sdcard_type, fs_type, mlstrustedobject;
 # /sys/devices/platform/tegra.*i2c\.[0-9]+(/.*)?
 type sysfs_nvi2c, fs_type, sysfs_type, mlstrustedobject;
 
-# /lbh(/.*)?
-type lbh_file, fs_type, contextmount_type;
-
 # sys/power/tegra_rail_stats, /sys/kernel/tegra_cpu_volt_cap(/.*)?
 type sysfs_tegra_rail_stats, fs_type, sysfs_type;
 type sysfs_tegra_cpu_volt_cap, fs_type, sysfs_type;

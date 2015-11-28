@@ -125,13 +125,6 @@
 # Tegra i2c devices sysfs
 /sys/devices/platform/tegra.*i2c\.[0-9]+(/.*)?	u:object_r:sysfs_nvi2c:s0
 
-#link_lbh
-/system/bin/link_lbh.sh		u:object_r:link_lbh_exec:s0
-#lbh-setup
-/system/bin/init_lbh.sh		u:object_r:lbh-setup_exec:s0
-#camera_lbh
-/system/bin/camera_lbh.sh		u:object_r:camera_lbh_exec:s0
-
 # cpuvoltcap
 /system/bin/nvcpuvoltcapd	u:object_r:cpuvoltcap_exec:s0
 
