@@ -1,0 +1,33 @@
+# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+type cpuvoltcap, domain;
+type cpuvoltcap_exec, exec_type, file_type;
+
+init_daemon_domain(cpuvoltcap)
+
+allow cpuvoltcap self:netlink_socket create_socket_perms;
+
+allow cpuvoltcap system_data_file:dir create_dir_perms;
+allow cpuvoltcap system_data_file:file create_file_perms;
+allow cpuvoltcap system_data_file:fifo_file create_file_perms;
+
+# /sys/devices/virtual/thermal/...
+allow cpuvoltcap sysfs_thermal:file r_file_perms;
+allow cpuvoltcap sysfs_thermal:dir r_dir_perms;
+
+# sys/power/tegra_rail_stats, /sys/kernel/tegra_cpu_volt_cap(/.*)?
+allow cpuvoltcap sysfs_tegra_rail_stats:file r_file_perms;
+allow cpuvoltcap sysfs_tegra_cpu_volt_cap:dir rw_dir_perms;
+allow cpuvoltcap sysfs_tegra_cpu_volt_cap:file rw_file_perms;

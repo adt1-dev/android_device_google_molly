@@ -1,0 +1,64 @@
+# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# devproxy
+type devproxy, domain;
+type devproxy_exec, exec_type, file_type;
+
+init_daemon_domain(devproxy)
+
+allow devproxy gps_data_file:dir create_dir_perms;
+allow devproxy gps_data_file:file create_file_perms;
+allow devproxy gps_data_file:fifo_file create_file_perms;
+allow devproxy gps_device:chr_file rw_file_perms;
+
+# agnss_connect
+type agnss_connect, domain;
+type agnss_connect_exec, exec_type, file_type;
+
+init_daemon_domain(agnss_connect)
+
+allow agnss_connect gps_data_file:dir create_dir_perms;
+allow agnss_connect gps_data_file:file create_file_perms;
+allow agnss_connect gps_data_file:fifo_file create_file_perms;
+allow agnss_connect gps_data_file:sock_file create_file_perms;
+allow agnss_connect gps_data_file:unix_dgram_socket { sendto };
+allow agnss_connect system_server:unix_dgram_socket { sendto };
+
+# iw
+type iw, domain;
+type iw_exec, exec_type, file_type;
+
+init_daemon_domain(iw)
+
+# add_p2p_iface
+type add_p2p_iface, domain;
+type add_p2p_iface_exec, exec_type, file_type;
+
+init_daemon_domain(add_p2p_iface)
+
+allow add_p2p_iface shell_exec:file read;
+allow add_p2p_iface iw_exec:file rx_file_perms;
+allow add_p2p_iface kernel:system module_request;
+allow add_p2p_iface self:netlink_socket create_socket_perms;
+allow add_p2p_iface self:udp_socket create_socket_perms;
+allow add_p2p_iface self:capability { net_admin net_raw sys_module };
+
+# uim
+type uim, domain;
+type uim_exec, exec_type, file_type;
+
+init_daemon_domain(uim)
+
+allow uim hci_attach_dev:chr_file rw_file_perms;
