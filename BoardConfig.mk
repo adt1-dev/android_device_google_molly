@@ -57,7 +57,7 @@ USE_OPENGL_RENDERER := true
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 1
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyFIQ0 smsc95xx.boot_wol_config=0x07 smsc95xx.turbo_mode=N androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=molly console=ttyFIQ0 smsc95xx.boot_wol_config=0x07 smsc95xx.turbo_mode=N androidboot.selinux=permissive
 # If building TWRP recovery, comment out the two lines below, and uncomment the two below that.
 TARGET_KERNEL_SOURCE := kernel/google/molly
 TARGET_KERNEL_CONFIG := cyanogenmod_molly_defconfig
