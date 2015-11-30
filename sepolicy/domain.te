@@ -1,11 +1,15 @@
-allow { surfaceflinger system system_app } { knv_device nvhost_writable_device }:chr_file rw_file_perms;
+# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-allow surfaceflinger { sysfs_devices_system_cpu sysfs_devices_tegradc }:file w_file_perms;
-allow surfaceflinger sysfs_devices_system_cpu:dir w_dir_perms;
-allow surfaceflinger tee_device:chr_file rw_file_perms;
-
-allow mediaserver { nvhost_writable_device nv_device nvhost_device }:chr_file rw_file_perms;
-
-allow appdomain { nvhost_writable_device nv_device }:chr_file rw_file_perms;
-
-allow zygote { video_device console_device nvhost_writable_device knv_device }:chr_file rw_file_perms;
+r_dir_file(domain, sysfs_bus_usb)

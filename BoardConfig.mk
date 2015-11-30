@@ -87,6 +87,10 @@ TW_NO_SCREEN_TIMEOUT := true
 TW_NO_CPU_TEMP := true
 TW_BRIGHTNESS_PATH := "/brightness"
 
+# Selinux
+BOARD_SEPOLICY_DIRS := \
+    device/google/molly/sepolicy
+
 # Wifi related defines
 BOARD_HAVE_MARVELL_WIFI          := true
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
@@ -97,22 +101,3 @@ BOARD_HOSTAPD_DRIVER             := NL80211
 BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_mrvl
 WIFI_DRIVER_FW_PATH_AP           := "/vendor/firmware/mrvl/sd8797_uapsta.bin"
 WIFI_DRIVER_FW_PATH_STA          := "/vendor/firmware/mrvl/sd8797_uapsta.bin"
-
-# Anything below this line is being shunned and therefore not alphabetized.
-
-# SELINUX Defines
-#BOARD_SEPOLICY_DIRS := \
-#    device/google/molly/sepolicy
-
-#BOARD_SEPOLICY_UNION := \
-#    app.te \
-#    device.te \
-#    domain.te \
-#    drmserver.te \
-#    file_contexts \
-#    file.te \
-#    init_shell.te \
-#    system.te \
-#    ueventd.te \
-#    zygote.te
-

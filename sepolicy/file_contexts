@@ -1,26 +1,153 @@
-/dev/knvmap                       u:object_r:knv_device:s0
-/dev/ttyHS2                       u:object_r:hci_attach_dev:s0
-/dev/tegra-crypto                 u:object_r:nvhost_writable_device:s0
-/dev/tegra-throughput             u:object_r:nvhost_writable_device:s0
-/dev/tegra_audio_avpchannel       u:object_r:nvhost_writable_device:s0
-/dev/tegra_avpchannel             u:object_r:nvhost_writable_device:s0
-/dev/tegra_camera                 u:object_r:nvhost_writable_device:s0
-/dev/tegra_dc_0                   u:object_r:nvhost_writable_device:s0
-/dev/tegra_dc_1                   u:object_r:nvhost_writable_device:s0
-/dev/tegra_dc_ctrl                u:object_r:nvhost_writable_device:s0
-/dev/tegra_rpc                    u:object_r:nvhost_writable_device:s0
-/dev/tegra_sema                   u:object_r:nvhost_writable_device:s0
-/dev/nvhost*                      u:object_r:nvhost_device:s0
-/dev/nvhost-ctrl                  u:object_r:nvhost_writable_device:s0
-/dev/nvhost-gr2d                  u:object_r:nvhost_writable_device:s0
-/dev/nvhost-gr3d                  u:object_r:nvhost_writable_device:s0
-/dev/nvhost-isp                   u:object_r:nvhost_writable_device:s0
-/dev/nvhost-msenc                 u:object_r:nvhost_writable_device:s0
-/dev/nvhost-tsec                  u:object_r:nvhost_writable_device:s0
-/dev/nvhost-vi                    u:object_r:nvhost_writable_device:s0
-/dev/nvhdcp*                      u:object_r:video_device:s0
+# Copyright (c) 2014, NVIDIA CORPORATION.  All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
-/data/tf(/.*)?                    u:object_r:tee_data_file:s0
+# GPU
+/dev/nvhost-as-gpu		u:object_r:gpu_device:s0
+/dev/nvhost-ctrl		u:object_r:gpu_device:s0
+/dev/nvhost-ctrl-gpu		u:object_r:gpu_device:s0
+/dev/nvhost-gpu			u:object_r:gpu_device:s0
+/dev/nvhost-dbg-gpu		u:object_r:gpu_device:s0
+/dev/nvhost-prof-gpu		u:object_r:gpu_device:s0
+# T114 use nvhost-gr2d and nvhost-gr3d instead of nvhost-vic
+/dev/nvhost-gr2d		u:object_r:gpu_device:s0
+/dev/nvhost-gr3d		u:object_r:gpu_device:s0
+/dev/nvmap			u:object_r:gpu_device:s0
+/dev/nvhdcp0			u:object_r:gpu_device:s0
+/dev/knvmap			u:object_r:gpu_device:s0
 
-/sys/devices/platform/host1x/tegradc\.0(/.*)?                u:object_r:sysfs_devices_tegradc:s0
-/sys/devices/platform/host1x/tegradc\.1(/.*)?                u:object_r:sysfs_devices_tegradc:s0
+# /dev/tegra-throughput
+/dev/tegra-throughput		u:object_r:throughput_device:s0
+
+# wifi
+/system/bin/wifi_loader.sh		u:object_r:wifi_loader_exec:s0
+
+# gps
+/system/bin/glgps_nvidiaTegra2android	u:object_r:gpsd_exec:s0
+
+# set_hwui_params.sh -- set android hwui parameters on boot time
+/system/bin/set_hwui_params.sh		u:object_r:set_hwui_exec:s0
+
+# modem sysfs
+/sys/power/sysedp(/.*)?                            u:object_r:sysfs_sysedp:s0
+/sys/class/gpio(/.*)?                              u:object_r:sysfs_gpio:s0
+/sys/devices/platform/.*/gpio/gpio[^/]+/[^/]*      u:object_r:sysfs_gpio:s0
+/sys/devices/platform/tegra_usb_modem_power(/.*)?  u:object_r:sysfs_radio:s0
+/sys/bus/usb(/.*)?                                 u:object_r:sysfs_bus_usb:s0
+/sys/devices/platform/tegra-ehci\.[0-9](/.*)?      u:object_r:sysfs_bus_usb:s0
+/sys/kernel/pmic                                   u:object_r:sysfs_pmic:s0
+/sys/devices/soc[0-9]+(/.*)?                       u:object_r:sysfs_soc:s0
+/sys/devices/virtual/gpio(/.*)?                    u:object_r:sysfs_gpio:s0
+
+# modem devices
+/dev/ttyACM.*                                      u:object_r:radio_device:s0
+
+# bt device
+/dev/ttyHS2					u:object_r:hci_attach_dev:s0
+/dev/hci_tty				u:object_r:hci_attach_dev:s0
+
+# camera devices
+/dev/camera.pcl				u:object_r:camera_device:s0
+/dev/nvhost-ctrl-vi.*			u:object_r:camera_device:s0
+/dev/nvhost-vi.*			u:object_r:camera_device:s0
+/dev/nvhost-ctrl-isp.*			u:object_r:camera_device:s0
+/dev/nvhost-isp.*			u:object_r:camera_device:s0
+/dev/nvhost-msenc			u:object_r:camera_device:s0
+/dev/focuser				u:object_r:camera_device:s0
+/dev/torch.*				u:object_r:camera_device:s0
+/dev/mipi-cal				u:object_r:camera_device:s0
+
+# camera data folder
+/data/nvcam(/.*)?				u:object_r:nv_camera_data_file:s0
+
+# lightsensor
+/dev/lightsensor				u:object_r:sensors_device:s0
+
+# Tegra System Profiler
+/dev/quadd				u:object_r:quadd_device:s0
+/dev/quadd_auth				u:object_r:quadd_auth_device:s0
+
+# i2c devices
+/dev/i2c-[0-9]+				u:object_r:i2c_device:s0
+
+# phs
+/dev/socket/phsd				u:object_r:phsd_socket:s0
+/data/misc/phs(/.*)?			u:object_r:phsd_data:s0
+/sys/devices/virtual/misc/tegra-throughput/fps			u:object_r:sysfs_throughput:s0
+/sys/devices/virtual/misc/tegra-throughput/framecount	u:object_r:sysfs_throughput:s0
+/system/vendor/bin/ussrd				u:object_r:ussrd_exec:s0
+/system/bin/ussr_setup.sh				u:object_r:ussr_setup_exec:s0
+
+# usdwatchdog
+/system/vendor/bin/usdwatchdog			u:object_r:usdwatchdog_exec:s0
+
+# kernel/cluster
+/sys/kernel/cluster(/.*)?	u:object_r:sysfs_devices_system_cpu:s0
+
+# PMQoS files for NvCplSvc
+/sys/devices/virtual/thermal(/.*)		u:object_r:sysfs_thermal:s0
+/sys/class/thermal/thermal_zone\.*(/.*)?	u:object_r:sysfs_thermal:s0
+/sys/devices/platform/host1x/tegradc\.[0-1]/smartdimmer(/.*)	u:object_r:sysfs_smartdimmer:s0
+/sys/devices/platform/host1x/tegradc\.[0-1]/cmu_enable		u:object_r:sysfs_cmu:s0
+/dev/constraint.*				u:object_r:pmqos_device:s0
+/dev/emc_freq_min				u:object_r:pmqos_device:s0
+/dev/cpu_freq_min				u:object_r:pmqos_device:s0
+/dev/cpu_freq_max				u:object_r:pmqos_device:s0
+/dev/min_online_cpus			u:object_r:pmqos_device:s0
+/dev/max_online_cpus			u:object_r:pmqos_device:s0
+/dev/gpu_freq_min				u:object_r:pmqos_device:s0
+/dev/gpu_freq_max				u:object_r:pmqos_device:s0
+
+/sys/module/cpu_tegra/parameters/cpu_user_cap       u:object_r:sysfs_devices_system_cpu:s0
+
+# Sound sysfs nodes
+/sys/class/sound(/.*)?			u:object_r:sysfs_sound:s0
+
+# Tsec
+/dev/nvhost-tsec			u:object_r:tsec_device:s0
+
+# Nvdec
+/dev/nvhost-nvdec			u:object_r:video_device:s0
+
+# Nvjpg
+/dev/nvhost-nvjpg			u:object_r:video_device:s0
+
+# SurfaceFlinger to PHS pagefiles
+/mnt/tmp/fc[0-9]			u:object_r:surfaceflinger_fc:s0
+
+# Tegra i2c devices sysfs
+/sys/devices/platform/tegra.*i2c\.[0-9]+(/.*)?	u:object_r:sysfs_nvi2c:s0
+
+# cpuvoltcap
+/system/bin/nvcpuvoltcapd	u:object_r:cpuvoltcap_exec:s0
+
+# for cpuvoltcap using path
+/sys/power/tegra_rail_stats				u:object_r:sysfs_tegra_rail_stats:s0
+/sys/kernel/tegra_cpu_volt_cap(/.*)?	u:object_r:sysfs_tegra_cpu_volt_cap:s0
+
+# ti wl18xx
+/system/bin/add_p2p_iface.sh		u:object_r:add_p2p_iface_exec:s0
+/system/bin/iw						u:object_r:iw_exec:s0
+
+/dev/tigps(/.*)?					u:object_r:gps_device:s0
+/data/gnss(/.*)?					u:object_r:gps_data_file:s0
+
+/system/bin/devproxy				u:object_r:devproxy_exec:s0
+/system/bin/agnss_connect			u:object_r:agnss_connect_exec:s0
+/system/bin/uim-sysfs				u:object_r:uim_exec:s0
+
+# setup_fs
+/system/bin/setup_fs				u:object_r:setup_fs_exec:s0
+/dev/block/platform/sdhci-tegra\.3/by-name/UDA	u:object_r:userdata_block_device:s0
+/dev/block/platform/sdhci-tegra\.3/by-name/CAC	u:object_r:cache_block_device:s0
+/dev/block/platform/sdhci-tegra\.3/by-name/FCT	u:object_r:factory_block_device:s0
