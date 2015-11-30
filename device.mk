@@ -70,6 +70,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     ro.com.widevine.cachesize=16777216
 
+# help GL work in M
+PRODUCT_PACKAGES += \
+    libmhax
+
 # HDMI
 PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4
 
