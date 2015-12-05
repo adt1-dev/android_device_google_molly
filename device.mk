@@ -119,6 +119,7 @@ PRODUCT_PACKAGES += \
 #    AppDrawer \
 #    LeanbackLauncher \
 #    LeanbackIme \
+#    CMLeanbackCustomizer \
 #    Overscan \
 #    TvProvider \
 #    TvSettings \
@@ -128,7 +129,6 @@ PRODUCT_PACKAGES += \
 # Make sure the above actually get removed
 PRODUCT_COPY_FILES += \
     device/google/molly/releasetools/tablet_build.sh:install/bin/tablet_build.sh
-
 
 # USB
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
