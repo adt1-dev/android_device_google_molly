@@ -119,6 +119,7 @@ PRODUCT_PACKAGES += \
 #    AppDrawer \
 #    LeanbackLauncher \
 #    LeanbackIme \
+#    CMLeanbackCustomizer \
 #    Overscan \
 #    TvProvider \
 #    TvSettings \

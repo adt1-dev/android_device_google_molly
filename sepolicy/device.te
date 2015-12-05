@@ -1,5 +1,0 @@
-type knv_device, dev_type;
-type sensors_block_device, dev_type;
-type sysfs_devices_tegradc, dev_type;
-type nvhost_device, dev_type;
-type nvhost_writable_device, dev_type, mlstrustedobject;
