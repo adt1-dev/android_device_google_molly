@@ -47,7 +47,6 @@ allow surfaceflinger surfaceflinger_fc:file create_file_perms;
 
 # allow shadercache toc file access, com.nvidia.NvCPLSvc
 allow surfaceflinger system_data_file:dir create_dir_perms;
-allow surfaceflinger system_data_file:file create_file_perms;
 
 # com.nvidia.NvCPLSvc
 allow surfaceflinger system_app_data_file:dir search;

@@ -16,7 +16,7 @@
 # Set up an ext4 filesystem on one or more block devices.
 type setup_fs, domain;
 type setup_fs_exec, exec_type, file_type;
-permissive_or_unconfined(setup_fs)
+# permissive_or_unconfined(setup_fs)
 
 init_daemon_domain(setup_fs)
 

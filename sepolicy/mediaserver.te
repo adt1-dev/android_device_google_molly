@@ -37,7 +37,7 @@ allow_use_phs(mediaserver)
 
 # allow shadercache toc file access
 allow mediaserver system_data_file:dir { create add_name open read write };
-allow mediaserver system_data_file:file { create open write lock };
+allow mediaserver system_data_file:file { open lock };
 
 allow mediaserver system_prop:property_service set;
 

@@ -56,9 +56,7 @@ allow system_app phsd_data:sock_file { write };
 
 # com.nvidia.NvCPLSvc
 allow system_app system_app_data_file:dir search;
-allow system_app system_app_data_file:lnk_file r_file_perms;
 allow system_app shell_data_file:dir search;
-allow system_app shell_data_file:lnk_file r_file_perms;
 allow system_app bluetooth_data_file:dir search;
 allow system_app bluetooth_data_file:lnk_file r_file_perms;
 allow system_app radio_data_file:dir search;

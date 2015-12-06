@@ -18,7 +18,6 @@ allow system_server gps_data_file:sock_file create_file_perms;
 allow system_server gps_data_file:dir rw_dir_perms;
 allow system_server gps_data_file:fifo_file create_file_perms;
 allow system_server gps_data_file:unix_dgram_socket { sendto };
-allow system_server agnss_connect:unix_dgram_socket { sendto };
 
 # pmqos control
 allow system_server pmqos_device:chr_file rw_file_perms;
@@ -39,9 +38,5 @@ allow system_server throughput_device:chr_file { open read write ioctl };
 
 allow system_server phsd_data:sock_file { write };
 
-# language settings
-allow system_server default_prop:property_service set;
-
 # move app to sdcard
-allow system_server apk_data_file:lnk_file link_file_perms;
 allow system_server fuse:dir search;

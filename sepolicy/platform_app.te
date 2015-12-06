@@ -18,8 +18,8 @@ unix_socket_connect(platform_app, phsd, init)
 allow platform_app throughput_device:chr_file { open read write ioctl };
 
 # PHS
-unix_socket_connect(platform_app, phsd, ussrd)
-unix_socket_send(platform_app, phsd, ussrd)
+# unix_socket_connect(platform_app, phsd, ussrd)
+# unix_socket_send(platform_app, phsd, ussrd)
 
 # tegra_sema
 allow platform_app video_device:chr_file { open read write ioctl };

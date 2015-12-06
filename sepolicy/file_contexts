@@ -85,11 +85,6 @@
 /data/misc/phs(/.*)?			u:object_r:phsd_data:s0
 /sys/devices/virtual/misc/tegra-throughput/fps			u:object_r:sysfs_throughput:s0
 /sys/devices/virtual/misc/tegra-throughput/framecount	u:object_r:sysfs_throughput:s0
-/system/vendor/bin/ussrd				u:object_r:ussrd_exec:s0
-/system/bin/ussr_setup.sh				u:object_r:ussr_setup_exec:s0
-
-# usdwatchdog
-/system/vendor/bin/usdwatchdog			u:object_r:usdwatchdog_exec:s0
 
 # kernel/cluster
 /sys/kernel/cluster(/.*)?	u:object_r:sysfs_devices_system_cpu:s0
@@ -128,23 +123,8 @@
 # Tegra i2c devices sysfs
 /sys/devices/platform/tegra.*i2c\.[0-9]+(/.*)?	u:object_r:sysfs_nvi2c:s0
 
-# cpuvoltcap
-/system/bin/nvcpuvoltcapd	u:object_r:cpuvoltcap_exec:s0
-
-# for cpuvoltcap using path
-/sys/power/tegra_rail_stats				u:object_r:sysfs_tegra_rail_stats:s0
-/sys/kernel/tegra_cpu_volt_cap(/.*)?	u:object_r:sysfs_tegra_cpu_volt_cap:s0
-
-# ti wl18xx
-/system/bin/add_p2p_iface.sh		u:object_r:add_p2p_iface_exec:s0
-/system/bin/iw						u:object_r:iw_exec:s0
-
 /dev/tigps(/.*)?					u:object_r:gps_device:s0
 /data/gnss(/.*)?					u:object_r:gps_data_file:s0
-
-/system/bin/devproxy				u:object_r:devproxy_exec:s0
-/system/bin/agnss_connect			u:object_r:agnss_connect_exec:s0
-/system/bin/uim-sysfs				u:object_r:uim_exec:s0
 
 # setup_fs
 /system/bin/setup_fs				u:object_r:setup_fs_exec:s0

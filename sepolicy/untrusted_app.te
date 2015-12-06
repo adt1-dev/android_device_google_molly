@@ -13,8 +13,8 @@
 # limitations under the License.
 
 # downloaded apps seem to run as unstrusted_app
-unix_socket_connect(untrusted_app, phsd, ussrd)
-unix_socket_send(untrusted_app, phsd, ussrd)
+# unix_socket_connect(untrusted_app, phsd, ussrd)
+# unix_socket_send(untrusted_app, phsd, ussrd)
 
 allow untrusted_app phsd_data:sock_file { write };
 
