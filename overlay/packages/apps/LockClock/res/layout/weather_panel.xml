@@ -51,7 +51,8 @@
     <ImageView
         android:id="@+id/weather_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="118px"
+        android:scaleType="centerInside"
         android:layout_centerHorizontal="true"
         android:src="@android:drawable/ic_dialog_alert" />
 
