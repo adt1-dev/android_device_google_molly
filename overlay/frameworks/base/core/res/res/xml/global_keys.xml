@@ -30,7 +30,7 @@
     <key keyCode="KEYCODE_TV" component="com.google.android.tv/.receiver.GlobalKeyReceiver" />
     <key keyCode="KEYCODE_TV_INPUT" component="com.google.android.tv/.receiver.GlobalKeyReceiver" />
     <key keyCode="KEYCODE_TV_POWER" component="com.google.android.athome.globalkeyinterceptor/.Receiver" />
-   <!-- <key keyCode="KEYCODE_VOLUME_UP" component="com.google.android.athome.globalkeyinterceptor/.Receiver" /> -->
-   <!-- <key keyCode="KEYCODE_VOLUME_DOWN" component="com.google.android.athome.globalkeyinterceptor/.Receiver" /> -->
+    <key keyCode="KEYCODE_VOLUME_UP" component="com.google.android.athome.globalkeyinterceptor/.Receiver" />
+    <key keyCode="KEYCODE_VOLUME_DOWN" component="com.google.android.athome.globalkeyinterceptor/.Receiver" />
     <key keyCode="KEYCODE_PAIRING" component="com.google.android.athome.globalkeyinterceptor/.Receiver" />
 </global_keys>

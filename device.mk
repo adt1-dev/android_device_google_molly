@@ -100,8 +100,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml \
-    $(LOCAL_PATH)/permissions/com.google.android.tv.installed.xml:system/etc/permissions/com.google.android.tv.installed.xml \
-    $(LOCAL_PATH)/permissions/tv_core_hardware.xml:system/etc/permissions/tv_core_hardware.xml \
     $(LOCAL_PATH)/permissions/molly_hardware.xml:system/etc/permissions/molly_hardware.xml
 
 # Ramdisk
@@ -110,15 +108,6 @@ PRODUCT_PACKAGES += \
     init.molly.rc \
     init.molly.usb.rc \
     ueventd.molly.rc
-
-# TV-specific Apps/Packages
-PRODUCT_PACKAGES += \
-    LeanbackLauncher \
-    LeanbackIme \
-    TvProvider \
-    TvSettings \
-    tv_input.default \
-    TV
 
 
 # USB
