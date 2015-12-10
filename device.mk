@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 The PureNexus Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,42 +14,65 @@
 # limitations under the License.
 #
 
-# Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
-$(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+# xhdpi, while we are hardcoding the 1080 resolution.
+# when we start doing 720 as well, will need to stop hardcoding this.
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=320
 
-$(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
+# There may be a cleaner way to do this.
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapgrowthlimit=128m \
+    dalvik.vm.heapsize=174m
 
-DEVICE_PACKAGE_OVERLAYS += device/google/molly/overlay
+$(call inherit-product-if-exists, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
+
+PRODUCT_CHARACTERISTICS := nosdcard,tv
+
+DEVICE_PACKAGE_OVERLAYS += \
+    device/google/molly/overlay
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.molly \
+    init.molly.rc \
+    init.molly.usb.rc \
+    ueventd.molly.rc
 
 # Audio
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/libaudio/audio_policy.conf:system/etc/audio_policy.conf
 PRODUCT_PACKAGES += \
-    audio.a2dp.default \
-    audio_policy.default \
-    audio.primary.default \
+    libtinyalsa \
     audio.primary.molly \
     audio.r_submix.default \
     audio.usb.default \
-    libaudiopolicyservice \
-    libaudiopolicymanager \
-    libaudiopolicymanagerdefault \
-    libtinyalsa \
-    libaudiospdif \
-    libaudioutils \
-    libaudioresampler
+    audio.a2dp.default \
+    libaudiopolicymanager
 
 USE_CUSTOM_AUDIO_POLICY := 1
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.cache-params=10240/20480/15 \
-    persist.sys.media.avsync=true \
-    media.aac_51_output_enabled=true
+# specific management of audio_policy.conf
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/libaudio/audio_policy.conf:system/etc/audio_policy.conf
 
-# Codec Configs
+# Hdmi CEC: Molly works as a playback device (4).
+PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4
+
+# Add props used in stock
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vold.wipe_on_crypt_fail=1 \
+    drm.service.enabled=true \
+    ro.com.widevine.cachesize=16777216 \
+    media.stagefright.cache-params=10240/20480/15 \
+    media.aac_51_output_enabled=true \
+    dalvik.vm.implicit_checks=none
+
+# Set default USB interface
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
+
+#Video
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \
@@ -57,19 +80,38 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
 
 
-# DRM
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true \
-    ro.com.widevine.cachesize=16777216
-
 # help GL work in M
 PRODUCT_PACKAGES += \
     libmhax
 
-# HDMI
-PRODUCT_PROPERTY_OVERRIDES += ro.hdmi.device_type=4
+# Wifi
+PRODUCT_PACKAGES += \
+    libwpa_client \
+    hostapd \
+    dhcpcd.conf \
+    wpa_supplicant
 
-# Keylayouts
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+
+PRODUCT_PROPERTY_OVERRIDES += wifi.interface=wlan0
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
+    frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
+    frameworks/native/data/etc/android.hardware.hdmi.cec.xml:system/etc/permissions/android.hardware.hdmi.cec.xml \
+    frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
+    $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml \
+    $(LOCAL_PATH)/permissions/molly_hardware.xml:system/etc/permissions/molly_hardware.xml
+
+# Key layout files
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayouts/ADT-1_Remote.kl:system/usr/keylayout/ADT-1_Remote.kl \
     $(LOCAL_PATH)/keylayouts/gpio-keypad.kl:system/usr/keylayout/gpio-keypad.kl \
@@ -81,50 +123,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayouts/virtual-remote.kcm:system/usr/keychars/virtual-remote.kcm \
     $(LOCAL_PATH)/keylayouts/Nexus_Remote.kl:system/usr/keylayout/Nexus_Remote.kl \
     $(LOCAL_PATH)/keylayouts/Vendor_20a0_Product_0001.kl:system/usr/keylayout/Vendor_20a0_Product_0001.kl \
-    $(LOCAL_PATH)/keylayouts/Vendor_18d1_Product_2c40.kl:system/usr/keylayout/Vendor_18d1_Product_2c40.kl
+    $(LOCAL_PATH)/keylayouts/Vendor_18d1_Product_2c40.kl:system/usr/keylayout/Vendor_18d1_Product_2c40.kl \
+    $(LOCAL_PATH)/keylayouts/Vendor_2836_Product_0001.kl:system/usr/keylayout/Vendor_2836_Product_0001.kl
 
-# Misc
-PRODUCT_TAGS += dalvik.gc.type-precise
-PRODUCT_CHARACTERISTICS := tv,nosdcard
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=320
-
-# Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
-	frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
-    frameworks/native/data/etc/android.hardware.hdmi.cec.xml:system/etc/permissions/android.hardware.hdmi.cec.xml \
-    frameworks/native/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml \
-    frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    $(LOCAL_PATH)/permissions/com.nvidia.nvsi.xml:system/etc/permissions/com.nvidia.nvsi.xml \
-    $(LOCAL_PATH)/permissions/molly_hardware.xml:system/etc/permissions/molly_hardware.xml
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    fstab.molly \
-    init.molly.rc \
-    init.molly.usb.rc \
-    ueventd.molly.rc
-
-
-# USB
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-     persist.sys.usb.config=mtp
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
-# Wifi
-PRODUCT_PACKAGES += \
-    dhcpcd.conf \
-    hostapd \
-    libwpa_client \
-    wpa_supplicant \
-    wpa_supplicant.conf
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
-PRODUCT_PROPERTY_OVERRIDES += wifi.interface=wlan0
-
+$(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
