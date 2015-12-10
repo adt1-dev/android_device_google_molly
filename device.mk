@@ -18,19 +18,11 @@
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# Bootanimation
-# TARGET_BOOTANIMATION_NAME := 800
-
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
 $(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/google/molly/overlay
-
-
-# ADB Over Wifi
-PRODUCT_PROPERTY_OVERRIDES += \
-    service.adb.tcp.port=4321
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -121,8 +113,6 @@ PRODUCT_PACKAGES += \
 
 # TV-specific Apps/Packages
 PRODUCT_PACKAGES += \
-    AppDrawer \
-    CMLeanbackCustomizer \
     LeanbackLauncher \
     LeanbackIme \
     TvProvider \

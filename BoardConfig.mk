@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 The PureNexus Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,8 +16,6 @@
 
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
-
-TARGET_SPECIFIC_HEADER_PATH := device/google/molly/include
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -58,11 +56,8 @@ SF_VSYNC_EVENT_PHASE_OFFSET_NS := 1
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=molly console=ttyFIQ0 smsc95xx.boot_wol_config=0x07 smsc95xx.turbo_mode=N androidboot.selinux=permissive
-# If building TWRP recovery, comment out the two lines below, and uncomment the two below that.
 TARGET_KERNEL_SOURCE := kernel/google/molly
-TARGET_KERNEL_CONFIG := cyanogenmod_molly_defconfig
-# TARGET_PREBUILT_KERNEL := device/google/molly/mini-zImage
-# LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+TARGET_KERNEL_CONFIG := molly_defconfig
 
 # Partition
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -78,14 +73,6 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 TARGET_RECOVERY_DEVICE_DIRS += device/google/molly
 TARGET_RECOVERY_FSTAB := device/google/molly/rootdir/etc/fstab.molly
-# TWRP (being included with the stuff in "Recovery")
-TW_THEME := landscape_hdpi
-BOARD_HAS_NO_REAL_SDCARD := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-RECOVERY_SDCARD_ON_DATA := true
-TW_NO_SCREEN_TIMEOUT := true
-TW_NO_CPU_TEMP := true
-TW_BRIGHTNESS_PATH := "/brightness"
 
 # Selinux
 BOARD_SEPOLICY_DIRS := \

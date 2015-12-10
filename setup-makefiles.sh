@@ -4,9 +4,10 @@ OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 VENDOR_MAKEFILE=../../../$OUTDIR/molly-vendor.mk
 YEAR=`date +"%Y"`
+ROM='The PureNexus Project'
 
 (cat << EOF) > $MAKEFILE
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR $ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -47,7 +48,7 @@ for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
 done
 
 (cat << EOF) > $VENDOR_MAKEFILE
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR $ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -68,7 +69,7 @@ done
 EOF
 
 (cat << EOF) > ../../../$OUTDIR/BoardConfigVendor.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR $ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -87,7 +88,7 @@ EOF
 
 if [ -d ../../../$OUTDIR/proprietary/app ]; then
 (cat << EOF) > ../../../$OUTDIR/proprietary/app/Android.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR $ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -146,7 +147,7 @@ fi
 
 if [ -d ../../../$OUTDIR/proprietary/framework ]; then
 (cat << EOF) > ../../../$OUTDIR/proprietary/framework/Android.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR $ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -200,7 +201,7 @@ fi
 
 if [ -d ../../../$OUTDIR/proprietary/priv-app ]; then
 (cat << EOF) > ../../../$OUTDIR/proprietary/priv-app/Android.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR $ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -262,7 +263,7 @@ LIBS=`cat proprietary-files.txt | grep '\-lib' | cut -d'-' -f2 | head -1`
 
 if [ -f ../../../$OUTDIR/proprietary/$LIBS ]; then
 (cat << EOF) > ../../../$OUTDIR/proprietary/lib/Android.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR $ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -319,7 +320,7 @@ VENDORLIBS=`cat proprietary-files.txt | grep '\-vendor\/lib' | cut -d'-' -f2 | h
 
 if [ -f ../../../$OUTDIR/proprietary/$VENDORLIBS ]; then
 (cat << EOF) > ../../../$OUTDIR/proprietary/vendor/lib/Android.mk
-# Copyright (C) $YEAR The CyanogenMod Project
+# Copyright (C) $YEAR $ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

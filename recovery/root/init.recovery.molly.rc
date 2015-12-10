@@ -1,5 +1,0 @@
-on init
-
-    # The flashing LED colors in recovery mode is kinda weird, so let's
-    # just make it blue!
-    # --- To be implemented ---

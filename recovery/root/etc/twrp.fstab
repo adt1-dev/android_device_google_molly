@@ -1,9 +1,0 @@
-/system         ext4            /dev/block/platform/sdhci-tegra.3/by-name/system
-/cache          ext4            /dev/block/platform/sdhci-tegra.3/by-name/cache
-/data           ext4            /dev/block/platform/sdhci-tegra.3/by-name/userdata
-/misc           emmc            /dev/block/platform/sdhci-tegra.3/by-name/misc
-/boot           emmc            /dev/block/platform/sdhci-tegra.3/by-name/boot
-/recovery       emmc            /dev/block/platform/sdhci-tegra.3/by-name/recovery
-/dtb            emmc            /dev/block/platform/sdhci-tegra.3/by-name/DTB
-/staging        emmc            /dev/block/platform/sdhci-tegra.3/by-name/staging
-/sysdata        emmc            /dev/block/platform/sdhci-tegra.3/by-name/sysdata
