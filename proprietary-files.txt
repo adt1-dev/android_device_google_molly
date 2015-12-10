@@ -1,6 +1,6 @@
 -app/LeanbackIme/LeanbackIme.apk
 -app/TungstenLEDService/TungstenLEDService.apk
--app/TungstenLEDService/lib/arm/libled_service_jni.so
+app/TungstenLEDService/lib/arm/libled_service_jni.so
 -app/TvVoiceInput/TvVoiceInput.apk
 bin/nvcgcserver
 etc/DxDrmConfig.txt
@@ -14,6 +14,7 @@ etc/firmware/tegra11x/nvhost_tsec.fw
 etc/permissions/com.google.widevine.software.drm.xml
 etc/permissions/nrdp.xml
 -framework/com.google.widevine.software.drm.jar
+lib/libatv_uinputbridge.so
 lib/crtbegin_so.o
 lib/crtend_so.o
 lib/egl/libEGL_tegra.so
@@ -79,7 +80,7 @@ lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 lib/libtungsten_led.so
 -priv-app/AtvRemoteService/AtvRemoteService.apk
--priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.
+priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.so
 -priv-app/GamepadPairingService/GamepadPairingService.apk
 -priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
 -priv-app/LeanbackLauncher/LeanbackLauncher.apk
