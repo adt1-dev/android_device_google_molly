@@ -24,7 +24,6 @@ lib/hw/gralloc.tegra4.so
 lib/hw/hdmi_cec.tegra4.so
 lib/hw/hwcomposer.tegra4.so
 lib/hw/keystore.molly.so
-lib/hw/tv_input.default.so
 lib/libardrv_dynamic.so
 lib/libaudioavp.so
 lib/libcgdrv.so
