@@ -62,7 +62,7 @@ lib/libnvodm_query.so
 lib/libnvomxadaptor.so
 lib/libnvomxilclient.so
 lib/libnvomx.so
-lib/libnvos.so
+-lib/libnvos.so
 lib/libnvparser.so
 lib/libnvrm_graphics.so
 lib/libnvrm.so
