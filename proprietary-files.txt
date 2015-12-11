@@ -91,7 +91,7 @@ vendor/firmware/mrvl/sd8797_uapsta.bin
 vendor/firmware/mrvl/txpower_JP.bin
 vendor/firmware/mrvl/txpower_US.bin
 vendor/lib/drm/libdrmwvmplugin.so
-vendor/lib/hw/power.molly.so
+#vendor/lib/hw/power.molly.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
