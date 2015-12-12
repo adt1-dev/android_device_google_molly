@@ -128,6 +128,10 @@
 
 # setup_fs
 /system/bin/setup_fs				u:object_r:setup_fs_exec:s0
-/dev/block/platform/sdhci-tegra\.3/by-name/UDA	u:object_r:userdata_block_device:s0
-/dev/block/platform/sdhci-tegra\.3/by-name/CAC	u:object_r:cache_block_device:s0
-/dev/block/platform/sdhci-tegra\.3/by-name/FCT	u:object_r:factory_block_device:s0
+
+# block devices
+/dev/block/platform/sdhci-tegra.3/by-name/system    u:object_r:system_block_device:s0
+/dev/block/platform/sdhci-tegra\.3/by-name/cache	u:object_r:cache_block_device:s0
+/dev/block/platform/sdhci-tegra\.3/by-name/userdata	u:object_r:userdata_block_device:s0
+/dev/block/platform/sdhci-tegra.3/by-name/boot      u:object_r:boot_block_device:s0
+/dev/block/platform/sdhci-tegra.3/by-name/recovery  u:object_r:recovery_block_device:s0
