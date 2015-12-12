@@ -18,3 +18,5 @@ set_hwui_params     u:object_r:system_app_service:s0
 ShieldStats		u:object_r:system_app_service:s0
 media.nvidia.audio_alsa           u:object_r:mediaserver_service:s0
 android.display.hwcomposer        u:object_r:surfaceflinger_service:s0
+
+RemoteControlService              u:object_r:remote_control_service:s0
