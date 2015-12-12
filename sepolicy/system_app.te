@@ -61,3 +61,6 @@ allow system_app bluetooth_data_file:dir search;
 allow system_app bluetooth_data_file:lnk_file r_file_perms;
 allow system_app radio_data_file:dir search;
 allow system_app radio_data_file:lnk_file r_file_perms;
+
+# TungstenLEDService
+allow system_app led_device:chr_file r_file_perms;
