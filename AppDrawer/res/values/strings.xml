@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2010 The Android Open Source Project
+<!-- Copyright (C) 2015 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -12,16 +12,10 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
--->
+ -->
 
-<!-- These are the hardware components that a molly includes.
--->
-<permissions>
-    <feature name="android.hardware.bluetooth" />
-    <feature name="android.hardware.bluetooth_le" />
-    <feature name="android.hardware.microphone" />
-    <feature name="android.hardware.screen.landscape" />
-    <feature name="android.hardware.type.television" />
-    <feature name="android.software.backup" />
-    <feature name="android.software.app_widgets" />
-</permissions>
+<resources>
+
+    <string name="app_name">App Drawer</string>
+
+</resources>
