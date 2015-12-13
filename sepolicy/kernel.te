@@ -1,0 +1,1 @@
+allow kernel self:capability { fowner chown fsetid };
