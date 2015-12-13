@@ -58,7 +58,7 @@ USE_OPENGL_RENDERER := true
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 1
 
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyFIQ0 smsc95xx.boot_wol_config=0x07 smsc95xx.turbo_mode=N androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=molly console=ttyFIQ0 smsc95xx.boot_wol_config=0x07 smsc95xx.turbo_mode=N
 # If building TWRP recovery, comment out the two lines below, and uncomment the two below that.
 TARGET_KERNEL_SOURCE := kernel/google/molly
 TARGET_KERNEL_CONFIG := cyanogenmod_molly_defconfig
@@ -75,7 +75,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 734003200
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Recovery
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD -DDISABLE_ASHMEM_TRACKING
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 TARGET_RECOVERY_DEVICE_DIRS += device/google/molly
 TARGET_RECOVERY_FSTAB := device/google/molly/rootdir/etc/fstab.molly
@@ -91,12 +91,9 @@ TW_BRIGHTNESS_PATH := "/brightness"
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/google/molly/releasetools
 
-# SELinux
-include device/nvidia/sepolicy/sepolicy.mk
-#BOARD_SEPOLICY_DIRS += \
-#    device/google/molly/sepolicy
-
-#BOARD_SEPOLICY_UNION += \
+# Selinux
+BOARD_SEPOLICY_DIRS := \
+    device/google/molly/sepolicy
 
 # Wifi related defines
 BOARD_HAVE_MARVELL_WIFI          := true
