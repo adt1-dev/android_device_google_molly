@@ -78,17 +78,17 @@
 
         <RelativeLayout
             android:id="@+id/weather_panel"
-            android:layout_width="wrap_content"
+            android:layout_width="97dip"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:orientation="vertical" >
 
             <TextView
                 android:id="@+id/weather_condition"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:ellipsize="marquee"
+                android:scrollHorizontally="true"
                 android:textSize="20sp"
                 android:textColor="?android:attr/textColorPrimary"
                 style="@style/label_shadow" />
