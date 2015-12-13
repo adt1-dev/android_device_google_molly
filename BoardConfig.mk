@@ -92,7 +92,6 @@ TW_BRIGHTNESS_PATH := "/brightness"
 TARGET_RELEASETOOLS_EXTENSIONS := device/google/molly/releasetools
 
 # SELinux
-include device/nvidia/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     device/google/molly/sepolicy
 
