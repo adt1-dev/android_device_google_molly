@@ -136,4 +136,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
+# Power HAL
+PRODUCT_PACKAGES += \
+    power.default
+
 $(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
