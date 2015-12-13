@@ -88,7 +88,6 @@ TW_NO_SCREEN_TIMEOUT := true
 TW_NO_CPU_TEMP := true
 TW_BRIGHTNESS_PATH := "/brightness"
 
-<<<<<<< HEAD
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/google/molly/releasetools
 
