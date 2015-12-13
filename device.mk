@@ -119,6 +119,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/tv_core_hardware.xml:system/etc/permissions/tv_core_hardware.xml \
     $(LOCAL_PATH)/permissions/molly_hardware.xml:system/etc/permissions/molly_hardware.xml
 
+# Power HAL
+PRODUCT_PACKAGES += \
+    power.default
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.molly \
@@ -155,4 +159,3 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 PRODUCT_PROPERTY_OVERRIDES += wifi.interface=wlan0
-
