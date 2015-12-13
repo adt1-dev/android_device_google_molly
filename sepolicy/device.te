@@ -32,3 +32,6 @@ type pmqos_device, dev_type;
 
 # factory block device mounted on /mnt/factory.
 type factory_block_device, dev_type;
+
+# dev/led
+type led_device, dev_type;
