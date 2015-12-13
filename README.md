@@ -1,4 +1,4 @@
-The defualt ADT-1 (Molly) CM-13.0 configuration is limited to TV features., i.e. no Navigation Bar/Status Bar. The goal of the cm-12.1-tablet branch is to restore the defualt CyanogenMod Tablet Configuration.
+The defualt ADT-1 (Molly) CM-13.0 configuration is limited to TV features., i.e. no Navigation Bar/Status Bar. The goal of the cm-13.0-tablet branch is to restore the defualt CyanogenMod Tablet Configuration.
 
 To opt to use this instead of the default TV configuration, edit your roomservice.xml, and append this to the end of the "device/google/molly" entry: revision="cm-13.0-tablet"
 
