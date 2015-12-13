@@ -60,6 +60,7 @@ TARGET_KERNEL_SOURCE := kernel/google/molly
 TARGET_KERNEL_CONFIG := molly_defconfig
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+TARGET_KERNEL_HAVE_EXFAT := true
 TARGET_KERNEL_HAVE_NTFS := true
 
 # Partition
