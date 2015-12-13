@@ -80,7 +80,7 @@ status_t AudioStreamIn::set(audio_format_t *pFormat, uint32_t *pChannelMask,
     Mutex::Autolock _l(mLock);
 
     assert(mRequestedSampleRate == 0);
-/*
+
     // Respond with a request for mono if a different format is given.
     if (*pChannelMask != kChannelMask) {
         *pChannelMask = kChannelMask;
@@ -91,7 +91,7 @@ status_t AudioStreamIn::set(audio_format_t *pFormat, uint32_t *pChannelMask,
         *pFormat = kAudioFormat;
         return BAD_VALUE;
     }
-*/
+
     mRequestedSampleRate = *pRate;
 
     return NO_ERROR;
