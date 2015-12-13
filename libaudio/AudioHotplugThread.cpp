@@ -234,10 +234,10 @@ bool AudioHotplugThread::getDeviceInfo(unsigned int pcmCard,
     len = s_get_alsa_card_name(cardName, sizeof(cardName), pcmCard);
     ALOGD("AudioHotplugThread get_alsa_card_name returned %d, %s", len, cardName);
     if (len > 0) {
-       // if (strcmp(ANDROID_TV_REMOTE_AUDIO_DEVICE_NAME, cardName) == 0) {
+        if (strcmp(ANDROID_TV_REMOTE_AUDIO_DEVICE_NAME, cardName) == 0) {
             ALOGD("AudioHotplugThread found Android TV remote mic on Card %d, for VOICE_RECOGNITION", pcmCard);
             info->forVoiceRecognition = true;
-      //  }
+        }
     }
 
     result = true;
