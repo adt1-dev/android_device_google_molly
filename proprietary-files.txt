@@ -1,8 +1,10 @@
+-app/CanvasPackageInstaller/CanvasPackageInstaller.apk
 -app/LeanbackIme/LeanbackIme.apk
 -app/TungstenLEDService/TungstenLEDService.apk
--app/TungstenLEDService/lib/arm/libled_service_jni.so
+app/TungstenLEDService/lib/arm/libled_service_jni.so
 -app/TvVoiceInput/TvVoiceInput.apk
 bin/nvcgcserver
+bin/tf_daemon
 etc/DxDrmConfig.txt
 etc/enctune.conf
 etc/firmware/nvavp_aud_ucode.bin
@@ -14,16 +16,17 @@ etc/firmware/tegra11x/nvhost_tsec.fw
 etc/permissions/com.google.widevine.software.drm.xml
 etc/permissions/nrdp.xml
 -framework/com.google.widevine.software.drm.jar
+lib/libatv_uinputbridge.so
 lib/crtbegin_so.o
 lib/crtend_so.o
 lib/egl/libEGL_tegra.so
 lib/egl/libGLESv1_CM_tegra.so
 lib/egl/libGLESv2_tegra.so
+lib/hw/bluetooth.default.so
 lib/hw/gralloc.tegra4.so
 lib/hw/hdmi_cec.tegra4.so
 lib/hw/hwcomposer.tegra4.so
 lib/hw/keystore.molly.so
-lib/hw/tv_input.default.so
 lib/libardrv_dynamic.so
 lib/libaudioavp.so
 lib/libcgdrv.so
@@ -37,6 +40,7 @@ lib/libled_service_jni.so
 lib/libnvapputil.so
 lib/libnvavp.so
 lib/libnvblit.so
+lib/libnvcapclk.so
 lib/libnvcms.so
 lib/libnvcpl.so
 lib/libnvddk_2d.so
@@ -62,7 +66,7 @@ lib/libnvodm_query.so
 lib/libnvomxadaptor.so
 lib/libnvomxilclient.so
 lib/libnvomx.so
-lib/libnvos.so
+-lib/libnvos.so
 lib/libnvparser.so
 lib/libnvrm_graphics.so
 lib/libnvrm.so
@@ -79,7 +83,7 @@ lib/libtsechdcp.so
 lib/libtsec_wrapper.so
 lib/libtungsten_led.so
 -priv-app/AtvRemoteService/AtvRemoteService.apk
--priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.
+priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.so
 -priv-app/GamepadPairingService/GamepadPairingService.apk
 -priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
 -priv-app/LeanbackLauncher/LeanbackLauncher.apk
@@ -90,7 +94,7 @@ vendor/firmware/mrvl/sd8797_uapsta.bin
 vendor/firmware/mrvl/txpower_JP.bin
 vendor/firmware/mrvl/txpower_US.bin
 vendor/lib/drm/libdrmwvmplugin.so
-vendor/lib/hw/power.molly.so
+#vendor/lib/hw/power.molly.so
 vendor/lib/libwvdrm_L1.so
 vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L1.so
