@@ -1,0 +1,2 @@
+allow tee tee_data_file:dir ra_dir_perms;
+allow tee tee_data_file:file create_file_perms;

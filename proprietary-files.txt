@@ -73,8 +73,10 @@ lib/libnvtnr.so
 lib/libnvtvmr.so
 lib/libnvwinsys.so
 lib/libnvwsi.so
+lib/liboemcrypto.so
 lib/libremotecontrolservice.so
 lib/libstagefrighthw.so
+lib/libstlport.so
 lib/libtf_crypto_sst.so
 lib/libtsechdcp.so
 lib/libtsec_wrapper.so

@@ -142,3 +142,6 @@
 
 # drm
 /data/DxDrm(/.*)?                                   u:object_r:drm_data_file:s0
+
+# tee
+/data/tf(/.*)?                                      u:object_r:tee_data_file:s0
