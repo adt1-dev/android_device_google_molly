@@ -57,7 +57,7 @@ ATVAudioPolicyManager::ATVAudioPolicyManager(
     : AudioPolicyManager(clientInterface), mForceSubmixInputSelection(false)
 {
 }
-
+/*
 float ATVAudioPolicyManager::computeVolume(audio_stream_type_t stream,
                                            int index,
                                            audio_devices_t device)
@@ -69,7 +69,7 @@ float ATVAudioPolicyManager::computeVolume(audio_stream_type_t stream,
     (void)device;
     return 0.0; // no attenuation == 0.0dB
 }
-
+*/
 status_t ATVAudioPolicyManager::setDeviceConnectionState(audio_devices_t device,
                                                          audio_policy_dev_state_t state,
                                                          const char *device_address,

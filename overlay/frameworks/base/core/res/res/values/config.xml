@@ -1,8 +1,5 @@
 <resources>
 
-    <!-- Don't allow volume change on the device. -->
-    <bool name="config_useFixedVolume">true</bool>
-
     <!-- Control the behavior when the user double-taps the home button.
             0 - Nothing
             1 - Recent apps view in SystemUI
