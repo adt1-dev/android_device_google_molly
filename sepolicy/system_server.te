@@ -40,3 +40,6 @@ allow system_server phsd_data:sock_file { write };
 
 # move app to sdcard
 allow system_server fuse:dir search;
+
+# power hal access to dev/led
+allow system_server led_device:chr_file r_file_perms;
