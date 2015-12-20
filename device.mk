@@ -140,6 +140,6 @@ PRODUCT_PACKAGES += \
 
 # Power HAL
 PRODUCT_PACKAGES += \
-    power.default
+    power.molly
 
 $(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
