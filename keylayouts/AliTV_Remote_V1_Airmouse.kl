@@ -13,7 +13,9 @@
 # limitations under the License.
 
 #
-# Generic key layout file for full alphabetic US English PC style external keyboards.
+# Modified generic key layout file for full alphabetic US English PC style external keyboards.
+#
+# key 61 changed from F3 to SEARCH, key 127 changed from MENU to BACK
 #
 # This file is intentionally very generic and is intended to support a broad rang of keyboards.
 # Do not edit the generic key layout to support a specific keyboard; instead, create

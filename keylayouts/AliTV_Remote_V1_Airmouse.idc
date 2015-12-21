@@ -13,8 +13,10 @@
 # limitations under the License.
 
 #
-# AliTV Airmouse
+# D-pad, mouse, and keyboard input from AliTV Airmouse
 #
 
-keyboard.orientationAware = 1
-keyboard.builtIn = 1
+device.internal = 0
+
+keyboard.builtIn = 0
+keyboard.orientationAware = 0
