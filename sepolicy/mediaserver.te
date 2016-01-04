@@ -48,3 +48,7 @@ allow mediaserver radio_device:chr_file rw_file_perms;
 allow mediaserver system_app_data_file:dir search;
 
 allow mediaserver app_data_file:dir read;
+
+# DxDrm access
+allow mediaserver drm_data_file:dir rw_dir_perms;
+allow mediaserver drm_data_file:file create_file_perms;
