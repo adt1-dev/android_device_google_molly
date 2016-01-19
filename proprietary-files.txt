@@ -1,5 +1,4 @@
 -app/CanvasPackageInstaller/CanvasPackageInstaller.apk
--app/LeanbackIme/LeanbackIme.apk
 -app/TungstenLEDService/TungstenLEDService.apk
 app/TungstenLEDService/lib/arm/libled_service_jni.so
 bin/nvcgcserver
@@ -85,10 +84,7 @@ lib/libtungsten_led.so
 priv-app/AtvRemoteService/lib/arm/libatv_uinputbridge.so
 -priv-app/GamepadPairingService/GamepadPairingService.apk
 -priv-app/GlobalKeyInterceptor/GlobalKeyInterceptor.apk
--priv-app/LeanbackLauncher/LeanbackLauncher.apk
--priv-app/Overscan/Overscan.apk
 -priv-app/RemoteControlService/RemoteControlService.apk
--priv-app/TV/TV.apk
 vendor/firmware/mrvl/sd8797_uapsta.bin
 vendor/firmware/mrvl/txpower_JP.bin
 vendor/firmware/mrvl/txpower_US.bin
