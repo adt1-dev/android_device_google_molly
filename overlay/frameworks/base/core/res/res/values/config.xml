@@ -28,6 +28,10 @@
         <item>"mobile_bluetooth,7,7,0,-1,true"</item>
     </string-array>
 
+    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+         autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>
+ 
     <!-- This string array should be overridden by the device to present a list of radio
          attributes.  This is used by the connectivity manager to decide which networks can coexist
          based on the hardware -->
