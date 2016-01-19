@@ -14,7 +14,8 @@
 # limitations under the License.
 #
 $(call inherit-product, device/google/molly/device.mk)
-$(call inherit-product, device/google/atv/products/atv_base.mk)
+# $(call inherit-product, device/google/atv/products/atv_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 PRODUCT_NAME := full_molly
 PRODUCT_DEVICE := molly
