@@ -14,3 +14,11 @@
 
 allow init self:capability { sys_module };
 allow init tmpfs:lnk_file create;
+# Molly-fixes&System-less-root
+allow init app_data_file:dir create;
+allow init kernel:system syslog_read;
+allow init loop_device:blk_file write;
+allow init property_socket:sock_file write;
+allow init self:process setcurrent;
+allow init untrusted_app_devpts:chr_file { read write ioctl open getattr };
+

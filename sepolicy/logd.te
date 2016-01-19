@@ -12,15 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-allow shell quadd_device:chr_file rw_file_perms;
-
-# tegra_sema
-allow shell video_device:chr_file { open read write ioctl };
-
-# /dev/tegra-throughput
-allow shell throughput_device:chr_file { open read write ioctl };
-
-# Logcat-Molly-fix
-#allow shell dalvikcache_data_file:dir write;
-#allow shell dalvikcache_data_file:file write;
+#Logcat-denial-fix
+allow logd devpts:chr_file { read write };
+allow logd untrusted_app_devpts:chr_file { read write };
 
