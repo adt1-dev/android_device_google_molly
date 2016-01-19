@@ -1,5 +1,7 @@
 # Google ADT-1 ("molly") Device Configuration 
 
+This branch intends to restore full tablet-like functionallity to the ADT-1 (molly).
+
 ## Spec Sheet
 | Feature                 | Specification                                                                               |
 | :---------------------- | :------------------------------------------------------------------------------------------ |
@@ -12,13 +14,13 @@
 | Release Date            | June 25, 2014                                                                               |
 
 ## Device Picture
-![Gooogle ADT-1](http://www.cnx-software.com/wp-content/uploads/2014/06/ADT-1_ANdroid_TV_Reference_Design.jpg "Gooogle ADT-1")
+![Gooogle ADT-1](http://www.cnx-software.com/wp-content/uploads/2014/06/ADT-1_Android_TV_Reference_Design.jpg "Gooogle ADT-1")
 
 ## Copyright
 
 ```
 #
-# Copyright (C) 2015 The CyanogenMod Project
+# Trademark (TM) 2016 The PureNexus Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
