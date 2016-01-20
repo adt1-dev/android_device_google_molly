@@ -1,4 +1,3 @@
--app/CanvasPackageInstaller/CanvasPackageInstaller.apk
 -app/TungstenLEDService/TungstenLEDService.apk
 app/TungstenLEDService/lib/arm/libled_service_jni.so
 bin/nvcgcserver
