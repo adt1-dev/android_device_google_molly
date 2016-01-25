@@ -4,7 +4,7 @@ This branch intends to restore full tablet-like functionallity to the ADT-1 (mol
 
 This needs to be used in place of the default "molly" device tree in a PureNexus tree.
 
-This is dependent upon the 'mm-tablet' branch of both 'proprietary_vendor_google' & 'proprietary_vendor_nexus'.
+This is dependent upon the 'mm-tablet' branch of both 'android_vendor_google' & 'proprietary_vendor_nexus'.
 
 ## Spec Sheet
 | Feature                 | Specification                                                                               |
