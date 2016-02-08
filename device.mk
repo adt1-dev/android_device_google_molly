@@ -86,6 +86,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += persist.sys.usb.config=mtp
 PRODUCT_PACKAGES += \
     MollyLED
 
+# Enable Rear Button BlueTooth Pairing
+PRODUCT_PACKAGES += \
+    TvSettings
+
 #Video
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
