@@ -129,6 +129,7 @@ PRODUCT_PACKAGES += \
     fstab.molly \
     init.molly.rc \
     init.molly.usb.rc \
+    init.molly.led.rc \
     ueventd.molly.rc
 
 # TV-specific Apps/Packages

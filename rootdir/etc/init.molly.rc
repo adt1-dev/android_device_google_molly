@@ -1,4 +1,5 @@
 import init.molly.usb.rc
+import init.molly.led.rc
 
 on init
     # Support legacy paths
@@ -29,6 +30,9 @@ on post-fs-data
     restorecon_recursive /data/tf
 
     setprop vold.post_fs_data_done 1
+
+    # Disable mollyled's "pulsing" value
+    write /sys/devices/platform/molly-led/pulsing 0
 
 on boot
 
