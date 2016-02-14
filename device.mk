@@ -147,6 +147,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayouts/Vendor_20a0_Product_0001.kl:system/usr/keylayout/Vendor_20a0_Product_0001.kl \
     $(LOCAL_PATH)/keylayouts/Vendor_2836_Product_0001.kl:system/usr/keylayout/Vendor_2836_Product_0001.kl
 
+# Power HAL
+PRODUCT_PACKAGES += \
+    power.default
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.molly \
+    init.molly.rc \
+    init.molly.usb.rc \
+    init.molly.led.rc \
+    ueventd.molly.rc
+
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
 
