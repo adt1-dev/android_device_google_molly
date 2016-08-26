@@ -126,7 +126,7 @@ Only the three quirks included above are recognized at this point:
             <Feature name="adaptive-playback" />
             <Limit name="concurrent-instances" max="32" />
         </MediaCodec>
-        <MediaCodec name="OMX.Nvidia.mp3.decoder" >
+        <!--<MediaCodec name="OMX.Nvidia.mp3.decoder" >
             <Type name="audio/mpeg" >
 		        <Limit name="channel-count" max="2" />
 		        <Limit name="sample-rate" ranges="8000,11025,12000,16000,22050,24000,32000,44100,48000" />
@@ -139,7 +139,7 @@ Only the three quirks included above are recognized at this point:
 				<Limit name="bitrate" range="8000-384000" />
                                 <Limit name="concurrent-instances" max="32" />
             </Type>
-        </MediaCodec>
+        </MediaCodec>-->
         <MediaCodec name="OMX.Nvidia.vp8.decode" type="video/x-vnd.on2.vp8" >
             <Limit name="size" min="32x32" max="3840x2176" />
             <Limit name="alignment" value="2x2" />
