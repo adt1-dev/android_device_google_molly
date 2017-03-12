@@ -35,4 +35,7 @@
     <feature name="android.software.input_methods" />
     <feature name="android.software.home_screen" />
     <feature name="android.software.device_admin" />
+    <feature name="android.software.managed_users" />
+     <feature name="android.hardware.audio.output" />
+    <feature name="android.software.print" />
 </permissions>
