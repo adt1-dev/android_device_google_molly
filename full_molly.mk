@@ -17,8 +17,13 @@ $(call inherit-product, device/google/molly/device.mk)
 # $(call inherit-product, device/google/atv/products/atv_base.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
+PRODUCT_PACKAGES += \
+     Launcher3
+
 PRODUCT_NAME := full_molly
 PRODUCT_DEVICE := molly
 PRODUCT_BRAND := google
 PRODUCT_MODEL := ADT-1
 PRODUCT_MANUFACTURER := Google
+
+PRODUCT_RELEASE_NAME := molly
