@@ -42,10 +42,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/google/molly/bluetooth
 # Camera
 USE_CAMERA_STUB = true
 
-# Alphabetized as "D" for "Dlmalloc"
-# Use dlmalloc
-MALLOC_IMPL := dlmalloc
-
 # Alphabetized as "F" for "Fonts"
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
@@ -60,6 +56,9 @@ TARGET_KERNEL_SOURCE := kernel/google/molly
 TARGET_KERNEL_CONFIG := molly_defconfig
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
+
+# Alphabetized as "m" for "malloc"
+MALLOC_SVELTE := true
 
 # Partition
 TARGET_USERIMAGES_USE_EXT4 := true
