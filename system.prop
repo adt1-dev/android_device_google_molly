@@ -43,6 +43,10 @@ ro.zygote.disable_gl_preload=true
 # Set carrier
 ro.carrier=wifi-only
 
+# Stagefright additions
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true 
+
 # LOL @ the insecurity of this
 ro.secure=0 
 ro.allow.mock.location=0 
