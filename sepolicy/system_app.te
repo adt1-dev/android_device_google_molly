@@ -34,8 +34,6 @@ allow system_app sysfs_cmu:file rw_file_perms;
 
 allow system_app device:dir r_dir_perms;
 
-allow system_app debugfs:file r_file_perms;
-
 # sys/devices/soc*/...
 allow system_app sysfs_soc:file r_file_perms;
 allow system_app sysfs_soc:dir r_dir_perms;
@@ -45,9 +43,6 @@ allow system_app sysfs_sysedp:dir r_dir_perms;
 allow system_app sysfs_sysedp:file rw_file_perms;
 allow system_app sysfs_nvi2c:dir r_dir_perms;
 allow system_app sysfs_nvi2c:{ file lnk_file } rw_file_perms;
-
-# tegra_sema
-allow system_app video_device:chr_file { open read write ioctl };
 
 # /dev/tegra-throughput
 allow system_app throughput_device:chr_file { open read write ioctl };

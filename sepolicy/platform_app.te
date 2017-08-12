@@ -21,9 +21,6 @@ allow platform_app throughput_device:chr_file { open read write ioctl };
 # unix_socket_connect(platform_app, phsd, ussrd)
 # unix_socket_send(platform_app, phsd, ussrd)
 
-# tegra_sema
-allow platform_app video_device:chr_file { open read write ioctl };
-
 # com.nvidia.NvCPLSvc
 allow platform_app system_app_data_file:dir search;
 

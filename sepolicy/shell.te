@@ -14,9 +14,6 @@
 
 allow shell quadd_device:chr_file rw_file_perms;
 
-# tegra_sema
-allow shell video_device:chr_file { open read write ioctl };
-
 # /dev/tegra-throughput
 allow shell throughput_device:chr_file { open read write ioctl };
 

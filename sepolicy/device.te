@@ -18,9 +18,6 @@ type quadd_device, dev_type;
 # /dev/quadd_auth
 type quadd_auth_device, dev_type;
 
-# /dev/i2c*
-type i2c_device, dev_type;
-
 # Tsec device
 type tsec_device, dev_type;
 

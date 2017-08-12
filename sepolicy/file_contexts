@@ -78,9 +78,6 @@
 /dev/quadd				u:object_r:quadd_device:s0
 /dev/quadd_auth				u:object_r:quadd_auth_device:s0
 
-# i2c devices
-/dev/i2c-[0-9]+				u:object_r:i2c_device:s0
-
 # phs
 /dev/socket/phsd				u:object_r:phsd_socket:s0
 /data/misc/phs(/.*)?			u:object_r:phsd_data:s0

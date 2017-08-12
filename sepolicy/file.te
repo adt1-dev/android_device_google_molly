@@ -44,9 +44,6 @@ type phsd_data, file_type;
 # /dev/socket/phsd
 type phsd_socket, file_type;
 
-# /sys/devices/virtual/thermal(/.*)
-type sysfs_thermal, fs_type, sysfs_type;
-
 # /sys/devices/platform/host1x/tegradc.0/smartdimmer/...
 type sysfs_smartdimmer, fs_type, sysfs_type;
 
@@ -77,9 +74,6 @@ type surfaceflinger_fc, file_type;
 
 # /mnt/factory
 type factory_file, fs_type, contextmount_type;
-
-# Needed to mount fuseblk filesystem
-type fuseblk, sdcard_type, fs_type, mlstrustedobject;
 
 # /sys/devices/platform/tegra.*i2c\.[0-9]+(/.*)?
 type sysfs_nvi2c, fs_type, sysfs_type, mlstrustedobject;
