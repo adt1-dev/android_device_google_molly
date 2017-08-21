@@ -16,7 +16,7 @@
 
 $(call inherit-product, device/google/molly/device.mk)
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-$(call inherit-product, device/google/molly/aosp_molly.mk)
+$(call inherit-product, device/google/molly/full_molly.mk)
 
 PRODUCT_NAME := lineage_molly
 PRODUCT_DEVICE := molly
