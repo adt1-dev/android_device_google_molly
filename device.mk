@@ -166,4 +166,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.molly
 
+# HIDL
+$(call inherit-product, $(LOCAL_PATH)/hidl/hidl.mk)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/hidl/manifest.xml:system/vendor/manifest.xml
+
 $(call inherit-product-if-exists, vendor/google/molly/molly-vendor.mk)
