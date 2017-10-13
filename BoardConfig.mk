@@ -39,6 +39,9 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MRVL := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/google/molly/bluetooth
 
+PRODUCT_PACKAGES += \
+    libbt-vendor
+
 # Camera
 USE_CAMERA_STUB = true
 
