@@ -109,6 +109,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
     dhcpcd.conf \
+    wificond \
     wpa_supplicant
 
 PRODUCT_COPY_FILES += \
