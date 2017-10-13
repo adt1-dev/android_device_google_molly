@@ -42,6 +42,9 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/google/molly/bluetooth
 # Camera
 USE_CAMERA_STUB = true
 
+# Display
+SF_START_GRAPHICS_ALLOCATOR_SERVICE := true
+
 # Alphabetized as "F" for "Fonts"
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
